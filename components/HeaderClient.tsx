@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import type { CategoryNode } from '@/lib/catalog'
 import { MobileMenu } from '@/components/MobileMenu'
 import { HeaderSearch } from '@/components/HeaderSearch'
+import { DesktopMegaMenu } from '@/components/DesktopMegaMenu'
 
 type SearchItem = {
   slug: string
@@ -48,7 +49,7 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
         <Button
           variant="outline"
           size="icon"
-          className="h-11 w-11 rounded-full"
+          className="h-11 w-11 rounded-full lg:hidden"
           onClick={() => setIsMenuOpen(true)}
           aria-label="Apri menu"
         >
@@ -68,6 +69,8 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
           }}
         />
       </div>
+
+      <DesktopMegaMenu />
 
       <MobileMenu open={isMenuOpen} onClose={() => setIsMenuOpen(false)} categories={categoryTree} />
     </header>
