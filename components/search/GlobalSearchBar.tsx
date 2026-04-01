@@ -26,12 +26,22 @@ function highlightText(text: string, query: string) {
   )
 }
 
-export function GlobalSearchBar({ products }: { products: SearchItem[] }) {
+export function GlobalSearchBar({
+  products,
+  isOpen,
+  menuIsOpen,
+  onOpenChange,
+}: {
+  products: SearchItem[]
+  isOpen: boolean
+  menuIsOpen: boolean
+  onOpenChange: (isOpen: boolean) => void
+}) {
   const [query, setQuery] = useState('')
-  const [open, setOpen] = useState(false)
   const [cursor, setCursor] = useState(-1)
   const [debounced, setDebounced] = useState('')
   const shellRef = useRef<HTMLDivElement>(null)
+  const blurTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -40,12 +50,18 @@ export function GlobalSearchBar({ products }: { products: SearchItem[] }) {
   }, [query])
 
   useEffect(() => {
+    if (menuIsOpen && isOpen) {
+      onOpenChange(false)
+    }
+  }, [isOpen, menuIsOpen, onOpenChange])
+
+  useEffect(() => {
     const onClick = (event: MouseEvent) => {
-      if (!shellRef.current?.contains(event.target as Node)) setOpen(false)
+      if (!shellRef.current?.contains(event.target as Node)) onOpenChange(false)
     }
     document.addEventListener('mousedown', onClick)
     return () => document.removeEventListener('mousedown', onClick)
-  }, [])
+  }, [onOpenChange])
 
   const results = useMemo(() => {
     const q = debounced.trim().toLowerCase()
@@ -69,7 +85,7 @@ export function GlobalSearchBar({ products }: { products: SearchItem[] }) {
     event.preventDefault()
     if (!query.trim()) return
     router.push(`/ricerca?q=${encodeURIComponent(query.trim())}`)
-    setOpen(false)
+    onOpenChange(false)
   }
 
   const onKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
@@ -77,7 +93,7 @@ export function GlobalSearchBar({ products }: { products: SearchItem[] }) {
     if (event.key === 'ArrowDown') {
       event.preventDefault()
       setCursor((prev) => (prev + 1) % results.length)
-      setOpen(true)
+      onOpenChange(true)
     }
     if (event.key === 'ArrowUp') {
       event.preventDefault()
@@ -86,7 +102,10 @@ export function GlobalSearchBar({ products }: { products: SearchItem[] }) {
     if (event.key === 'Enter' && cursor >= 0) {
       event.preventDefault()
       router.push(`/prodotto/${results[cursor].slug}`)
-      setOpen(false)
+      onOpenChange(false)
+    }
+    if (event.key === 'Escape') {
+      onOpenChange(false)
     }
   }
 
@@ -97,22 +116,29 @@ export function GlobalSearchBar({ products }: { products: SearchItem[] }) {
           value={query}
           onChange={(event) => {
             setQuery(event.target.value)
-            setOpen(true)
+            onOpenChange(Boolean(event.target.value.trim()))
             setCursor(-1)
           }}
-          onFocus={() => setOpen(true)}
+          onFocus={() => {
+            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current)
+            if (query.trim()) onOpenChange(true)
+          }}
+          onBlur={() => {
+            blurTimeoutRef.current = setTimeout(() => onOpenChange(false), 140)
+          }}
           onKeyDown={onKeyDown}
           placeholder="Cerca casco, giacca, accessorio..."
           aria-label="Cerca prodotti"
+          aria-controls="global-search-dropdown"
         />
       </form>
-      {open && query.trim() && (
+      {isOpen && query.trim() && (
         <SearchDropdown
           query={query}
           items={results}
           cursor={cursor}
           onHover={setCursor}
-          onClose={() => setOpen(false)}
+          onClose={() => onOpenChange(false)}
         />
       )}
       <Link href={`/ricerca?q=${encodeURIComponent(query || '')}`} className="search-all-link">

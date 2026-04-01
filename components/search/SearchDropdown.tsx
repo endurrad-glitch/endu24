@@ -24,7 +24,7 @@ export function SearchDropdown({
   onClose: () => void
 }) {
   return (
-    <div className="search-dropdown" role="listbox" aria-label={`Risultati per ${query}`}>
+    <div id="global-search-dropdown" className="search-dropdown" role="listbox" aria-label={`Risultati per ${query}`}>
       {items.length === 0 && <p className="empty-search">Nessun risultato rapido trovato.</p>}
       {items.map((item, index) => (
         <SearchResultItem
