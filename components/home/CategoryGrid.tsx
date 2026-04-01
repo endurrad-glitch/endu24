@@ -1,16 +1,33 @@
 import Link from 'next/link'
 import type { CategoryNode } from '@/lib/catalog'
 
+const iconByName: Record<string, string> = {
+  caschi: '🪖',
+  abbigliamento: '🧥',
+  accessori: '🎒',
+  manutenzione: '🔧',
+  elettronica: '🎧',
+  moto: '🏍️',
+}
+
 export function CategoryGrid({ categories }: { categories: CategoryNode[] }) {
   return (
-    <section>
-      <h2 className="mb-3 text-xl font-semibold tracking-tight">Categorie popolari</h2>
-      <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
-        {categories.map((category) => (
-          <Link key={category.id} href={`/categoria/${category.slug}`} className="rounded-xl border border-slate-200 bg-white px-3 py-4 text-center text-sm font-medium text-slate-700">
-            {category.name}
-          </Link>
-        ))}
+    <section className="grid gap-3">
+      <h2 className="text-lg font-semibold text-[#2b2b2b]">Categorie popolari</h2>
+      <div className="grid grid-cols-2 gap-4">
+        {categories.map((category) => {
+          const icon = iconByName[category.slug] || '🏷️'
+          return (
+            <Link
+              key={category.id}
+              href={`/categoria/${category.slug}`}
+              className="flex min-h-11 items-center gap-2 rounded-2xl border border-slate-200 bg-white p-3 text-sm font-medium text-[#2b2b2b]"
+            >
+              <span aria-hidden className="text-lg">{icon}</span>
+              <span className="line-clamp-2">{category.name}</span>
+            </Link>
+          )
+        })}
       </div>
     </section>
   )

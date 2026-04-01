@@ -1,8 +1,8 @@
-import { HeroSection } from '@/components/home/HeroSection'
+import { HomepageHero } from '@/components/home/HomepageHero'
 import { CategoryGrid } from '@/components/home/CategoryGrid'
-import { OffersSlider } from '@/components/home/OffersSlider'
+import { ProductGrid } from '@/components/home/ProductGrid'
+import { DealsCarousel } from '@/components/home/DealsCarousel'
 import { TrustSection } from '@/components/home/TrustSection'
-import { ProductCard } from '@/components/ProductCard'
 import { buildCategoryTree, filterProductsByCategorySlug, getFlatCategories } from '@/lib/catalog'
 import { getProducts } from '@/lib/products'
 
@@ -10,7 +10,7 @@ export default async function HomePage() {
   const [products, flatCategories] = await Promise.all([getProducts(), getFlatCategories()])
   const categoryTree = buildCategoryTree(flatCategories)
   const rootCategories = categoryTree.filter((category) => category.level === 0)
-  const categories = rootCategories.slice(0, 6)
+  const categories = rootCategories.slice(0, 4)
 
   const trending = [...products]
     .sort((a, b) => {
@@ -20,45 +20,24 @@ export default async function HomePage() {
       const bScore = (b.rating * 40) + (b.reviews * 0.15) + (b.offers.length * 12) - (bPrice * 0.02)
       return bScore - aScore
     })
-    .slice(0, 10)
-
-  const highlights = rootCategories
-    .map((category) => {
-      const categoryProducts = filterProductsByCategorySlug(products, category.slug, flatCategories, categoryTree)
-      return {
-        slot: category.slug,
-        categoryName: category.name,
-        categorySlug: category.slug,
-        product: categoryProducts[0] ?? null,
-      }
-    })
-    .filter((entry): entry is { slot: string, categoryName: string, categorySlug: string, product: (typeof products)[number] } => Boolean(entry.product))
-
-  const heroHighlights = [...highlights]
-  if (heroHighlights.length < 4 && trending.length) {
-    heroHighlights.push({
-      slot: 'trend',
-      categoryName: 'Top trend',
-      categorySlug: rootCategories[0]?.slug || 'accessori',
-      product: trending[0],
-    })
-  }
+    .slice(0, 8)
 
   const featuredDeals = [...products]
     .filter((p) => p.compareAtPrice && p.compareAtPrice > p.price)
+    .slice(0, 8)
+
+  const popularFromCategories = rootCategories
+    .flatMap((category) => filterProductsByCategorySlug(products, category.slug, flatCategories, categoryTree).slice(0, 1))
     .slice(0, 6)
 
   return (
-    <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-4 md:px-6 md:py-6">
-      <HeroSection highlights={heroHighlights.slice(0, 4)} />
+    <main className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-4">
+      <HomepageHero />
       <section id="categorie">
         <CategoryGrid categories={categories} />
       </section>
-      <section>
-        <h2 className="mb-3 text-xl font-semibold tracking-tight">Prodotti trend</h2>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">{trending.map((product) => <ProductCard key={product.slug} product={product} />)}</div>
-      </section>
-      <OffersSlider products={featuredDeals.length ? featuredDeals : trending.slice(0, 4)} />
+      <ProductGrid products={trending} />
+      <DealsCarousel products={featuredDeals.length ? featuredDeals : popularFromCategories} />
       <TrustSection products={products.length} shops={12} />
     </main>
   )

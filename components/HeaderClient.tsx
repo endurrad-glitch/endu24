@@ -33,13 +33,8 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto grid w-full max-w-6xl gap-3 px-4 py-3 md:grid-cols-[auto_minmax(0,1fr)] md:items-center md:px-6">
-        <div className="flex items-center justify-between gap-3">
-          <BrandLogo />
-          <Button variant="outline" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(true)} aria-label="Apri menu">
-            ☰
-          </Button>
-        </div>
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 py-3">
+        <BrandLogo />
 
         <GlobalSearchBar
           products={searchIndex}
@@ -50,6 +45,10 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
             if (nextOpen) setIsMenuOpen(false)
           }}
         />
+
+        <Button variant="outline" size="icon" className="h-11 w-11 rounded-full" onClick={() => setIsMenuOpen(true)} aria-label="Apri menu">
+          ☰
+        </Button>
       </div>
 
       <Sheet open={isMenuOpen} onClose={() => setIsMenuOpen(false)} title="Categorie">
