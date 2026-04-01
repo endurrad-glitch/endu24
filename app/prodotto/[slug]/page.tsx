@@ -44,7 +44,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   return (
     <main className="container page-stack">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: product.category, href: `/ricerca?categoria=${encodeURIComponent(product.category)}` }, { label: product.title }]} />
+      <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: product.category, href: product.categorySlug ? `/categoria/${product.categorySlug}` : `/ricerca?categoria=${encodeURIComponent(product.category)}` }, { label: product.title }]} />
 
       <section className="pdp-hero">
         <ProductGallery images={product.images} title={product.title} />

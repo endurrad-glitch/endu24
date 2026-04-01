@@ -4,49 +4,63 @@ import { useState } from 'react'
 import Link from 'next/link'
 import type { CategoryNode } from '@/lib/catalog'
 
-export function CategoryMenu({ categories }: { categories: CategoryNode[] }) {
-  const [openLabel, setOpenLabel] = useState<string | null>(null)
+type Props = {
+  categories: CategoryNode[]
+}
+
+export function CategoryMenu({ categories }: Props) {
+  const [openSlug, setOpenSlug] = useState<string | null>(null)
 
   return (
     <nav className="category-menu" aria-label="Categorie principali">
       <div className="category-menu-scroll">
-        {categories.map((category) => {
-          const isOpen = openLabel === category.label
-          return (
-            <div
-              key={category.label}
-              className={`category-item ${isOpen ? 'open' : ''}`}
-              onMouseEnter={() => setOpenLabel(category.label)}
-              onMouseLeave={() => setOpenLabel(null)}
-            >
-              <button
-                type="button"
-                className="category-trigger"
-                onClick={() => setOpenLabel(isOpen ? null : category.label)}
-                aria-expanded={isOpen}
-              >
-                <span className="category-dot" aria-hidden />
-                {category.label}
-              </button>
+        {categories
+          .filter((category) => category.level === 0)
+          .map((category) => {
+            const isOpen = openSlug === category.slug
 
-              <div className="mega-menu">
-                <div className="mega-col mega-col-parent">
-                  <Link href={category.href} className="mega-title">Vedi tutto in {category.label}</Link>
+            return (
+              <div
+                key={category.id}
+                className={`category-item ${isOpen ? 'open' : ''}`}
+                onMouseEnter={() => setOpenSlug(category.slug)}
+                onMouseLeave={() => setOpenSlug(null)}
+              >
+                <div className="category-trigger-wrap">
+                  <Link href={`/categoria/${category.slug}`} className="category-trigger-link">
+                    <span className="category-dot" aria-hidden />
+                    {category.name}
+                  </Link>
+                  <button
+                    type="button"
+                    className="category-trigger-toggle"
+                    onClick={() => setOpenSlug(isOpen ? null : category.slug)}
+                    aria-expanded={isOpen}
+                    aria-label={`Apri sottomenu ${category.name}`}
+                  >
+                    ▾
+                  </button>
                 </div>
-                {category.children.map((sub) => (
-                  <div key={sub.label} className="mega-col">
-                    <Link href={sub.href} className="mega-title">{sub.label}</Link>
-                    <div className="mega-links">
-                      {sub.children.map((child) => (
-                        <Link key={child.label} href={child.href}>{child.label}</Link>
-                      ))}
-                    </div>
+
+                <div className="mega-menu" role="menu">
+                  <div className="mega-col mega-col-parent">
+                    <Link href={`/categoria/${category.slug}`} className="mega-title">Tutti i prodotti {category.name}</Link>
                   </div>
-                ))}
+
+                  {category.children.map((child) => (
+                    <div key={child.id} className="mega-col">
+                      <Link href={`/categoria/${child.slug}`} className="mega-title">{child.name}</Link>
+                      <div className="mega-links">
+                        {child.children.map((grandchild) => (
+                          <Link key={grandchild.id} href={`/categoria/${grandchild.slug}`}>{grandchild.name}</Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
     </nav>
   )
