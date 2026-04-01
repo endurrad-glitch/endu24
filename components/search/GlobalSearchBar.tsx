@@ -1,7 +1,6 @@
 'use client'
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { SearchDropdown } from '@/components/search/SearchDropdown'
 
@@ -141,9 +140,6 @@ export function GlobalSearchBar({
           onClose={() => onOpenChange(false)}
         />
       )}
-      <Link href={`/ricerca?q=${encodeURIComponent(query || '')}`} className="search-all-link">
-        Vedi tutti i risultati
-      </Link>
     </div>
   )
 }
