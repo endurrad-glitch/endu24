@@ -48,13 +48,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       <section className="pdp-hero">
         <ProductGallery images={product.images} title={product.title} />
-        <div>
-          <p>{product.brand}</p>
+        <div className="pdp-summary">
+          <p className="pdp-brand">{product.brand}</p>
           <h1>{product.title}</h1>
           <p className="price">{formatPrice(product.offers[0].price)}</p>
-          <p>★ {product.rating} · {product.reviews} recensioni · da {product.offers.length} negozi</p>
-          {mainOfferUrl ? <a href={mainOfferUrl} className="primary-btn" target="_blank" rel="noopener noreferrer sponsored">Vai all&apos;offerta</a> : <span className="secondary-btn">Link non disponibile</span>}
-          <div dangerouslySetInnerHTML={{ __html: product.description }} />
+          <p className="pdp-rating">★ {product.rating} · {product.reviews} recensioni · da {product.offers.length} negozi</p>
+          {mainOfferUrl ? <a href={mainOfferUrl} className="primary-btn" target="_blank" rel="noopener noreferrer sponsored">Vedi offerta</a> : <span className="secondary-btn">Link non disponibile</span>}
+
+          <details className="pdp-description" open>
+            <summary>Descrizione prodotto</summary>
+            <div dangerouslySetInnerHTML={{ __html: product.description }} />
+          </details>
         </div>
       </section>
 
