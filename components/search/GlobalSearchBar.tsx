@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useEffect, useMemo, useRef, useState } from 'react'
+import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { SearchDropdown } from '@/components/search/SearchDropdown'
 
@@ -39,32 +39,21 @@ export function GlobalSearchBar({
   const [query, setQuery] = useState('')
   const [cursor, setCursor] = useState(-1)
   const [debounced, setDebounced] = useState('')
-  const shellRef = useRef<HTMLDivElement>(null)
-  const blurTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const router = useRouter()
 
   useEffect(() => {
-    const t = setTimeout(() => setDebounced(query), 240)
+    const t = setTimeout(() => setDebounced(query), 200)
     return () => clearTimeout(t)
   }, [query])
 
   useEffect(() => {
-    if (menuIsOpen && isOpen) {
-      onOpenChange(false)
-    }
+    if (menuIsOpen && isOpen) onOpenChange(false)
   }, [isOpen, menuIsOpen, onOpenChange])
-
-  useEffect(() => {
-    const onClick = (event: MouseEvent) => {
-      if (!shellRef.current?.contains(event.target as Node)) onOpenChange(false)
-    }
-    document.addEventListener('mousedown', onClick)
-    return () => document.removeEventListener('mousedown', onClick)
-  }, [onOpenChange])
 
   const results = useMemo(() => {
     const q = debounced.trim().toLowerCase()
     if (!q) return []
+
     return products
       .map((product) => {
         const text = `${product.title} ${product.brand} ${product.category}`.toLowerCase()
@@ -73,7 +62,7 @@ export function GlobalSearchBar({
       })
       .filter((entry) => entry.score > 0)
       .sort((a, b) => b.score - a.score || a.product.price - b.product.price)
-      .slice(0, 8)
+      .slice(0, 12)
       .map((entry) => ({
         ...entry.product,
         highlighted: highlightText(entry.product.title, query),
@@ -103,14 +92,16 @@ export function GlobalSearchBar({
       router.push(`/prodotto/${results[cursor].slug}`)
       onOpenChange(false)
     }
-    if (event.key === 'Escape') {
-      onOpenChange(false)
-    }
+    if (event.key === 'Escape') onOpenChange(false)
   }
 
   return (
-    <div className="global-search" ref={shellRef}>
-      <form onSubmit={onSubmit} role="search">
+    <div className="global-search">
+      <button type="button" className="search-mobile-trigger" onClick={() => onOpenChange(true)} aria-label="Apri ricerca">
+        Cerca casco, giacca, accessorio...
+      </button>
+
+      <form onSubmit={onSubmit} role="search" className="search-desktop-form">
         <input
           value={query}
           onChange={(event) => {
@@ -118,19 +109,48 @@ export function GlobalSearchBar({
             onOpenChange(Boolean(event.target.value.trim()))
             setCursor(-1)
           }}
-          onFocus={() => {
-            if (blurTimeoutRef.current) clearTimeout(blurTimeoutRef.current)
-            if (query.trim()) onOpenChange(true)
-          }}
-          onBlur={() => {
-            blurTimeoutRef.current = setTimeout(() => onOpenChange(false), 140)
-          }}
+          onFocus={() => query.trim() && onOpenChange(true)}
           onKeyDown={onKeyDown}
           placeholder="Cerca casco, giacca, accessorio..."
           aria-label="Cerca prodotti"
           aria-controls="global-search-dropdown"
         />
       </form>
+
+      {isOpen && (
+        <div className="search-mobile-overlay" role="dialog" aria-modal="true">
+          <div className="search-mobile-header">
+            <form onSubmit={onSubmit} role="search" className="search-mobile-form">
+              <input
+                autoFocus
+                value={query}
+                onChange={(event) => {
+                  setQuery(event.target.value)
+                  setCursor(-1)
+                }}
+                onKeyDown={onKeyDown}
+                placeholder="Cerca prodotti..."
+                aria-label="Cerca prodotti"
+              />
+            </form>
+            <button type="button" className="header-icon-btn" onClick={() => onOpenChange(false)} aria-label="Chiudi ricerca">✕</button>
+          </div>
+
+          {query.trim() ? (
+            <SearchDropdown
+              query={query}
+              items={results}
+              cursor={cursor}
+              onHover={setCursor}
+              onClose={() => onOpenChange(false)}
+              mode="mobile"
+            />
+          ) : (
+            <p className="search-mobile-empty">Inizia a digitare per trovare prodotti e offerte.</p>
+          )}
+        </div>
+      )}
+
       {isOpen && query.trim() && (
         <SearchDropdown
           query={query}

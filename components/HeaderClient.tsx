@@ -30,6 +30,13 @@ export function HeaderClient({
   const headerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
+    document.body.style.overflow = isSearchOpen || isMenuOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen, isSearchOpen])
+
+  useEffect(() => {
     const onDocumentPointerDown = (event: MouseEvent | TouchEvent) => {
       if (!headerRef.current?.contains(event.target as Node)) {
         setIsSearchOpen(false)
@@ -50,20 +57,18 @@ export function HeaderClient({
         <div className="header-top-row">
           <BrandLogo />
 
-          <div className="header-mobile-actions">
-            <button
-              type="button"
-              className="header-icon-btn"
-              aria-label={isMenuOpen ? 'Chiudi menu' : 'Apri menu'}
-              aria-expanded={isMenuOpen}
-              onClick={() => {
-                setIsMenuOpen((prev) => !prev)
-                setIsSearchOpen(false)
-              }}
-            >
-              ☰
-            </button>
-          </div>
+          <button
+            type="button"
+            className="header-icon-btn"
+            aria-label={isMenuOpen ? 'Chiudi menu' : 'Apri menu'}
+            aria-expanded={isMenuOpen}
+            onClick={() => {
+              setIsMenuOpen((prev) => !prev)
+              setIsSearchOpen(false)
+            }}
+          >
+            ☰
+          </button>
         </div>
 
         <GlobalSearchBar

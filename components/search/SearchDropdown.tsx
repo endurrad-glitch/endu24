@@ -16,15 +16,17 @@ export function SearchDropdown({
   cursor,
   onHover,
   onClose,
+  mode = 'desktop',
 }: {
   query: string
   items: Item[]
   cursor: number
   onHover: (index: number) => void
   onClose: () => void
+  mode?: 'desktop' | 'mobile'
 }) {
   return (
-    <div id="global-search-dropdown" className="search-dropdown" role="listbox" aria-label={`Risultati per ${query}`}>
+    <div id="global-search-dropdown" className={`search-dropdown ${mode === 'mobile' ? 'mobile' : ''}`} role="listbox" aria-label={`Risultati per ${query}`}>
       {items.length === 0 && <p className="empty-search">Nessun risultato rapido trovato.</p>}
       {items.map((item, index) => (
         <SearchResultItem
