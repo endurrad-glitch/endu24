@@ -51,3 +51,29 @@ Per input specifico:
 ```bash
 node scripts/import-catalog.mjs --source csv --input data/products_export.csv --brand loboo
 ```
+
+## Maintenance mode (Vercel-ready)
+
+Il progetto supporta una maintenance mode centralizzata tramite `proxy.ts`.
+
+### Attivazione / disattivazione
+
+1. Imposta la variabile ambiente:
+
+```bash
+MAINTENANCE_MODE=true
+```
+
+2. Deploy su Vercel (o riavvio locale) per applicare la modifica.
+
+Per tornare online:
+
+```bash
+MAINTENANCE_MODE=false
+```
+
+### Comportamento
+
+- con `MAINTENANCE_MODE=true` tutte le route applicative vengono riscritte su `/maintenance`
+- restano accessibili asset statici e path tecnici (`/_next`, `/api`, file pubblici)
+- evita loop grazie all'esclusione esplicita di `/maintenance`
