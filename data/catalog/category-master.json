@@ -1,0 +1,9 @@
+[
+  { "slug": "caschi", "name": "Caschi", "keywords": ["casco", "helmet"] },
+  { "slug": "giacche", "name": "Giacche", "keywords": ["giacca", "jacket"] },
+  { "slug": "guanti", "name": "Guanti", "keywords": ["guanti", "gloves"] },
+  { "slug": "valigie-borse", "name": "Valigie & Borse", "keywords": ["valigia", "borsa", "baule", "bag", "pannier", "top case"] },
+  { "slug": "elettronica", "name": "Elettronica", "keywords": ["gps", "camera", "telecamera", "tpms", "bluetooth", "interfono", "luce"] },
+  { "slug": "protezioni", "name": "Protezioni", "keywords": ["protezione", "armatura", "para"] },
+  { "slug": "accessori-moto", "name": "Accessori Moto", "keywords": ["accessori", "supporto", "specchio", "staffa", "moto"] }
+]

@@ -1,7 +1,8 @@
 import { type Offer } from '@/lib/products'
 import { formatPrice } from '@/lib/format'
+import { buildOutboundUrl } from '@/lib/tracking'
 
-export function PriceComparisonTable({ offers }: { offers: Offer[] }) {
+export function PriceComparisonTable({ offers, slug }: { offers: Offer[], slug: string }) {
   return (
     <section>
       <h2>Confronto prezzi</h2>
@@ -11,7 +12,7 @@ export function PriceComparisonTable({ offers }: { offers: Offer[] }) {
           {offers.map((offer) => (
             <tr key={`${offer.shop}-${offer.price}`}>
               <td>{offer.shop}</td><td>{formatPrice(offer.price)}</td><td>{offer.shipping}</td><td>{offer.availability}</td>
-              <td><a href={offer.url}>Vai</a></td>
+              <td>{buildOutboundUrl(offer.url, slug, 'price-table') ? <a href={buildOutboundUrl(offer.url, slug, 'price-table')!} target="_blank" rel="noopener noreferrer sponsored">Vai</a> : <span>Non disponibile</span>}</td>
             </tr>
           ))}
         </tbody>

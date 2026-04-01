@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "node scripts/lint.mjs"
+    "lint": "node scripts/lint.mjs",
+    "import:catalog": "node scripts/import-catalog.mjs --brand loboo"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.0",

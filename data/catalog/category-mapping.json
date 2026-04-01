@@ -1,0 +1,17 @@
+{
+  "loboo": {
+    "motorcycle side bag & top bag": "valigie-borse",
+    "motorcycle side bag": "valigie-borse",
+    "tail bag": "valigie-borse",
+    "tank bag": "valigie-borse",
+    "bracket": "accessori-moto",
+    "phone mount": "accessori-moto",
+    "driving lights": "elettronica",
+    "electronics": "elettronica"
+  },
+  "default": {
+    "helmet": "caschi",
+    "jackets": "giacche",
+    "gloves": "guanti"
+  }
+}
