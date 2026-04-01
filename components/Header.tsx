@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import { getProducts } from '@/lib/products'
-import { CategoryMenu } from '@/components/CategoryMenu'
 import { buildCategoryTree, getFlatCategories } from '@/lib/catalog'
-import { GlobalSearchBar } from '@/components/search/GlobalSearchBar'
+import { HeaderClient } from '@/components/HeaderClient'
 
 export default async function Header() {
   const [products, flatCategories] = await Promise.all([getProducts(), getFlatCategories()])
@@ -21,21 +19,5 @@ export default async function Header() {
 
   const categoryTree = buildCategoryTree(flatCategories)
 
-  return (
-    <header className="site-header">
-      <div className="container header-grid">
-        <Link href="/" className="brand" aria-label="Endu24 home">
-          <span className="brand-logo">E24</span>
-          <span className="brand-text">endu24</span>
-        </Link>
-        <GlobalSearchBar products={searchIndex} />
-        <div className="header-utility">Comparatore Premium</div>
-      </div>
-      <div className="header-categories-wrap">
-        <div className="container">
-          <CategoryMenu categories={categoryTree} />
-        </div>
-      </div>
-    </header>
-  )
+  return <HeaderClient searchIndex={searchIndex} categoryTree={categoryTree} />
 }
