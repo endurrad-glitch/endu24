@@ -1,9 +1,11 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { GlobalSearchBar } from '@/components/search/GlobalSearchBar'
 import { CategoryMenu } from '@/components/CategoryMenu'
 import { BrandLogo } from '@/components/BrandLogo'
+import { Button } from '@/components/ui/button'
+import { Sheet } from '@/components/ui/sheet'
 import type { CategoryNode } from '@/lib/catalog'
 
 type SearchItem = {
@@ -18,16 +20,9 @@ type SearchItem = {
   shops: number
 }
 
-export function HeaderClient({
-  searchIndex,
-  categoryTree,
-}: {
-  searchIndex: SearchItem[]
-  categoryTree: CategoryNode[]
-}) {
+export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: SearchItem[]; categoryTree: CategoryNode[] }) {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const headerRef = useRef<HTMLElement>(null)
 
   useEffect(() => {
     document.body.style.overflow = isSearchOpen || isMenuOpen ? 'hidden' : ''
@@ -36,39 +31,14 @@ export function HeaderClient({
     }
   }, [isMenuOpen, isSearchOpen])
 
-  useEffect(() => {
-    const onDocumentPointerDown = (event: MouseEvent | TouchEvent) => {
-      if (!headerRef.current?.contains(event.target as Node)) {
-        setIsSearchOpen(false)
-      }
-    }
-
-    document.addEventListener('mousedown', onDocumentPointerDown)
-    document.addEventListener('touchstart', onDocumentPointerDown)
-    return () => {
-      document.removeEventListener('mousedown', onDocumentPointerDown)
-      document.removeEventListener('touchstart', onDocumentPointerDown)
-    }
-  }, [])
-
   return (
-    <header className="site-header" ref={headerRef}>
-      <div className="container header-grid">
-        <div className="header-top-row">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="mx-auto grid w-full max-w-6xl gap-3 px-4 py-3 md:grid-cols-[auto_minmax(0,1fr)] md:items-center md:px-6">
+        <div className="flex items-center justify-between gap-3">
           <BrandLogo />
-
-          <button
-            type="button"
-            className="header-icon-btn"
-            aria-label={isMenuOpen ? 'Chiudi menu' : 'Apri menu'}
-            aria-expanded={isMenuOpen}
-            onClick={() => {
-              setIsMenuOpen((prev) => !prev)
-              setIsSearchOpen(false)
-            }}
-          >
+          <Button variant="outline" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(true)} aria-label="Apri menu">
             ☰
-          </button>
+          </Button>
         </div>
 
         <GlobalSearchBar
@@ -80,25 +50,11 @@ export function HeaderClient({
             if (nextOpen) setIsMenuOpen(false)
           }}
         />
-
-        <div className="header-utility">Comparatore Premium</div>
       </div>
 
-      <div className="header-categories-wrap desktop-only">
-        <div className="container">
-          <CategoryMenu categories={categoryTree} isSearchOpen={isSearchOpen} onMenuOpenChange={setIsMenuOpen} mode="desktop" />
-        </div>
-      </div>
-
-      <div className={`mobile-menu-overlay ${isMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-menu-sheet">
-          <div className="mobile-menu-header">
-            <strong>Categorie</strong>
-            <button type="button" className="header-icon-btn" onClick={() => setIsMenuOpen(false)} aria-label="Chiudi menu">✕</button>
-          </div>
-          <CategoryMenu categories={categoryTree} isSearchOpen={isSearchOpen} onMenuOpenChange={setIsMenuOpen} mode="mobile" />
-        </div>
-      </div>
+      <Sheet open={isMenuOpen} onClose={() => setIsMenuOpen(false)} title="Categorie">
+        <CategoryMenu categories={categoryTree} onNavigate={() => setIsMenuOpen(false)} />
+      </Sheet>
     </header>
   )
 }

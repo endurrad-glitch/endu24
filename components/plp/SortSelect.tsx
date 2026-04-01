@@ -12,13 +12,8 @@ const options: Array<{ value: SortMode; label: string }> = [
 
 export function SortSelect({ value, onChange }: { value: SortMode; onChange: (value: SortMode) => void }) {
   return (
-    <label className="sort-select-wrap" aria-label="Ordina risultati">
-      <span className="sr-only">Ordina risultati</span>
-      <select className="sort-select" value={value} onChange={(event) => onChange(event.target.value as SortMode)}>
-        {options.map((option) => (
-          <option key={option.value} value={option.value}>{option.label}</option>
-        ))}
-      </select>
-    </label>
+    <select className="h-10 rounded-xl border border-slate-200 bg-white px-3 text-sm" value={value} onChange={(event) => onChange(event.target.value as SortMode)} aria-label="Ordina risultati">
+      {options.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+    </select>
   )
 }

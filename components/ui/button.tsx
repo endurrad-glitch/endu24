@@ -10,13 +10,13 @@ export function Button({ className, variant = 'primary', size = 'default', ...pr
   return (
     <button
       className={cn(
-        'inline-flex items-center justify-center rounded-[14px] font-semibold transition active:scale-[0.99] disabled:opacity-50 disabled:pointer-events-none min-h-11',
-        variant === 'primary' && 'bg-[#ff5a00] text-white shadow-[0_10px_20px_rgba(255,90,0,0.24)]',
-        variant === 'outline' && 'border border-[#d9e0ea] bg-white text-[#1f2937]',
-        variant === 'ghost' && 'bg-transparent text-[#1f2937]',
-        size === 'default' && 'px-4 py-2.5 text-[0.92rem]',
-        size === 'sm' && 'px-3 py-2 text-sm min-h-10',
-        size === 'icon' && 'h-11 w-11',
+        'inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition active:scale-[0.98] disabled:pointer-events-none disabled:opacity-60',
+        variant === 'primary' && 'bg-[#ff5a00] text-white shadow-[0_8px_20px_rgba(255,90,0,0.3)] hover:bg-[#ea5200]',
+        variant === 'outline' && 'border border-slate-200 bg-white text-slate-800 hover:bg-slate-50',
+        variant === 'ghost' && 'bg-transparent text-slate-700 hover:bg-slate-100',
+        size === 'default' && 'h-11 px-4 text-sm',
+        size === 'sm' && 'h-9 px-3 text-xs',
+        size === 'icon' && 'h-10 w-10',
         className,
       )}
       {...props}

@@ -49,14 +49,14 @@ export default async function HomePage() {
     .slice(0, 6)
 
   return (
-    <main className="container page-stack">
+    <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-4 md:px-6 md:py-6">
       <HeroSection highlights={heroHighlights.slice(0, 4)} />
       <section id="categorie">
         <CategoryGrid categories={categories} />
       </section>
       <section>
-        <h2>Prodotti trend</h2>
-        <div className="products-grid products-grid-trending">{trending.map((product) => <ProductCard key={product.slug} product={product} />)}</div>
+        <h2 className="mb-3 text-xl font-semibold tracking-tight">Prodotti trend</h2>
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">{trending.map((product) => <ProductCard key={product.slug} product={product} />)}</div>
       </section>
       <OffersSlider products={featuredDeals.length ? featuredDeals : trending.slice(0, 4)} />
       <TrustSection products={products.length} shops={12} />

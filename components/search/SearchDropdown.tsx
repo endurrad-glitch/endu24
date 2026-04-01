@@ -10,24 +10,10 @@ type Item = {
   shops: number
 }
 
-export function SearchDropdown({
-  query,
-  items,
-  cursor,
-  onHover,
-  onClose,
-  mode = 'desktop',
-}: {
-  query: string
-  items: Item[]
-  cursor: number
-  onHover: (index: number) => void
-  onClose: () => void
-  mode?: 'desktop' | 'mobile'
-}) {
+export function SearchDropdown({ query, items, cursor, onHover, onClose, mode = 'desktop' }: { query: string; items: Item[]; cursor: number; onHover: (index: number) => void; onClose: () => void; mode?: 'desktop' | 'mobile' }) {
   return (
-    <div id="global-search-dropdown" className={`search-dropdown ${mode === 'mobile' ? 'mobile' : ''}`} role="listbox" aria-label={`Risultati per ${query}`}>
-      {items.length === 0 && <p className="empty-search">Nessun risultato rapido trovato.</p>}
+    <div className={mode === 'mobile' ? 'grid gap-2' : 'absolute left-0 right-0 top-[calc(100%+8px)] z-40 grid max-h-[65vh] gap-2 overflow-auto rounded-2xl border border-slate-200 bg-white p-2 shadow-xl'} role="listbox" aria-label={`Risultati per ${query}`}>
+      {items.length === 0 && <p className="p-3 text-sm text-slate-500">Nessun risultato rapido trovato.</p>}
       {items.map((item, index) => (
         <SearchResultItem
           key={item.slug}

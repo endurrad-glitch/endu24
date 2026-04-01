@@ -3,39 +3,20 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { SearchDropdown } from '@/components/search/SearchDropdown'
+import { Button } from '@/components/ui/button'
+import { Dialog } from '@/components/ui/dialog'
+import { Input } from '@/components/ui/input'
 
-type SearchItem = {
-  slug: string
-  title: string
-  brand: string
-  category: string
-  image: string
-  price: number
-  rating: number
-  reviews: number
-  shops: number
-}
+type SearchItem = { slug: string; title: string; brand: string; category: string; image: string; price: number; rating: number; reviews: number; shops: number }
 
 function highlightText(text: string, query: string) {
   const q = query.trim()
   if (!q) return text
   const pattern = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig')
-  return text.split(pattern).map((part, index) =>
-    part.toLowerCase() === q.toLowerCase() ? <mark key={index}>{part}</mark> : part,
-  )
+  return text.split(pattern).map((part, index) => (part.toLowerCase() === q.toLowerCase() ? <mark key={index}>{part}</mark> : part))
 }
 
-export function GlobalSearchBar({
-  products,
-  isOpen,
-  menuIsOpen,
-  onOpenChange,
-}: {
-  products: SearchItem[]
-  isOpen: boolean
-  menuIsOpen: boolean
-  onOpenChange: (isOpen: boolean) => void
-}) {
+export function GlobalSearchBar({ products, isOpen, menuIsOpen, onOpenChange }: { products: SearchItem[]; isOpen: boolean; menuIsOpen: boolean; onOpenChange: (isOpen: boolean) => void }) {
   const [query, setQuery] = useState('')
   const [cursor, setCursor] = useState(-1)
   const [debounced, setDebounced] = useState('')
@@ -53,7 +34,6 @@ export function GlobalSearchBar({
   const results = useMemo(() => {
     const q = debounced.trim().toLowerCase()
     if (!q) return []
-
     return products
       .map((product) => {
         const text = `${product.title} ${product.brand} ${product.category}`.toLowerCase()
@@ -63,10 +43,7 @@ export function GlobalSearchBar({
       .filter((entry) => entry.score > 0)
       .sort((a, b) => b.score - a.score || a.product.price - b.product.price)
       .slice(0, 12)
-      .map((entry) => ({
-        ...entry.product,
-        highlighted: highlightText(entry.product.title, query),
-      }))
+      .map((entry) => ({ ...entry.product, highlighted: highlightText(entry.product.title, query) }))
   }, [debounced, products, query])
 
   const onSubmit = (event: FormEvent) => {
@@ -76,33 +53,10 @@ export function GlobalSearchBar({
     onOpenChange(false)
   }
 
-  const onKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (event) => {
-    if (!results.length) return
-    if (event.key === 'ArrowDown') {
-      event.preventDefault()
-      setCursor((prev) => (prev + 1) % results.length)
-      onOpenChange(true)
-    }
-    if (event.key === 'ArrowUp') {
-      event.preventDefault()
-      setCursor((prev) => (prev <= 0 ? results.length - 1 : prev - 1))
-    }
-    if (event.key === 'Enter' && cursor >= 0) {
-      event.preventDefault()
-      router.push(`/prodotto/${results[cursor].slug}`)
-      onOpenChange(false)
-    }
-    if (event.key === 'Escape') onOpenChange(false)
-  }
-
   return (
-    <div className="global-search">
-      <button type="button" className="search-mobile-trigger" onClick={() => onOpenChange(true)} aria-label="Apri ricerca">
-        Cerca casco, giacca, accessorio...
-      </button>
-
-      <form onSubmit={onSubmit} role="search" className="search-desktop-form">
-        <input
+    <div className="relative">
+      <form onSubmit={onSubmit} role="search" className="hidden md:block">
+        <Input
           value={query}
           onChange={(event) => {
             setQuery(event.target.value)
@@ -110,56 +64,32 @@ export function GlobalSearchBar({
             setCursor(-1)
           }}
           onFocus={() => query.trim() && onOpenChange(true)}
-          onKeyDown={onKeyDown}
           placeholder="Cerca casco, giacca, accessorio..."
           aria-label="Cerca prodotti"
-          aria-controls="global-search-dropdown"
         />
       </form>
 
-      {isOpen && (
-        <div className="search-mobile-overlay" role="dialog" aria-modal="true">
-          <div className="search-mobile-header">
-            <form onSubmit={onSubmit} role="search" className="search-mobile-form">
-              <input
-                autoFocus
-                value={query}
-                onChange={(event) => {
-                  setQuery(event.target.value)
-                  setCursor(-1)
-                }}
-                onKeyDown={onKeyDown}
-                placeholder="Cerca prodotti..."
-                aria-label="Cerca prodotti"
-              />
+      <Button type="button" variant="outline" className="w-full justify-start md:hidden" onClick={() => onOpenChange(true)}>
+        Cerca casco, giacca, accessorio...
+      </Button>
+
+      {isOpen && query.trim() && <SearchDropdown query={query} items={results} cursor={cursor} onHover={setCursor} onClose={() => onOpenChange(false)} />}
+
+      <Dialog open={isOpen}>
+        <section className="fixed inset-0 z-[91] overflow-y-auto bg-slate-50 p-4 md:hidden">
+          <div className="mb-3 flex items-center gap-2">
+            <form onSubmit={onSubmit} className="flex-1">
+              <Input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Cerca prodotti..." />
             </form>
-            <button type="button" className="header-icon-btn" onClick={() => onOpenChange(false)} aria-label="Chiudi ricerca">✕</button>
+            <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Chiudi</Button>
           </div>
-
           {query.trim() ? (
-            <SearchDropdown
-              query={query}
-              items={results}
-              cursor={cursor}
-              onHover={setCursor}
-              onClose={() => onOpenChange(false)}
-              mode="mobile"
-            />
+            <SearchDropdown query={query} items={results} cursor={cursor} onHover={setCursor} onClose={() => onOpenChange(false)} mode="mobile" />
           ) : (
-            <p className="search-mobile-empty">Inizia a digitare per trovare prodotti e offerte.</p>
+            <p className="text-sm text-slate-500">Inizia a digitare per trovare prodotti e offerte.</p>
           )}
-        </div>
-      )}
-
-      {isOpen && query.trim() && (
-        <SearchDropdown
-          query={query}
-          items={results}
-          cursor={cursor}
-          onHover={setCursor}
-          onClose={() => onOpenChange(false)}
-        />
-      )}
+        </section>
+      </Dialog>
     </div>
   )
 }
