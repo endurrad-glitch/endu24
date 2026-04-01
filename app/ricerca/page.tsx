@@ -31,7 +31,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
   const titleContext = rawQuery || category || 'ricerca prodotti'
 
   return (
-    <main className="container page-stack">
+    <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-4 md:px-6 md:py-6">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: titleContext }]} />
       <ResultsHeader titleContext={titleContext} total={filtered.length} />
       <ProductResultsExplorer products={filtered} />

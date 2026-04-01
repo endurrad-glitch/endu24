@@ -18,7 +18,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const filteredProducts = filterProductsByCategorySlug(products, slug, flatCategories, categoryTree)
 
   return (
-    <main className="container page-stack">
+    <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-4 md:px-6 md:py-6">
       <Breadcrumb items={[{ label: 'Home', href: '/' }, { label: currentCategory.name }]} />
       <ResultsHeader titleContext={currentCategory.name} total={filteredProducts.length} />
       <ProductResultsExplorer products={filteredProducts} />
