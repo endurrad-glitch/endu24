@@ -1,6 +1,5 @@
 import './globals.css'
-import HeaderSticky from '@/components/HeaderSticky'
-import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 export const metadata = {
   title: 'Endu24',
@@ -15,9 +14,8 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body>
-        <HeaderSticky />
+        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   )

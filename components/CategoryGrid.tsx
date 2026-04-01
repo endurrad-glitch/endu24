@@ -1,13 +1,20 @@
 import Link from 'next/link'
 
-export default function CategoryGrid({ categories }: { categories: string[] }) {
+type Category = {
+  name: string
+  icon: string
+  href: string
+  image: string
+}
+
+export default function CategoryGrid({ categories }: { categories: Category[] }) {
   return (
     <div className="category-grid">
       {categories.map((category) => (
-        <Link key={category} href={`/search?category=${encodeURIComponent(category)}`} className="category-box">
-          <img src="/window.svg" alt={category} loading="lazy" />
-          <span className="category-icon" aria-hidden>⚫</span>
-          <h3>{category}</h3>
+        <Link key={category.name} href={category.href} className="category-box">
+          <img src={category.image} alt={category.name} loading="lazy" />
+          <span className="category-icon" aria-hidden>{category.icon}</span>
+          <h3>{category.name}</h3>
         </Link>
       ))}
     </div>

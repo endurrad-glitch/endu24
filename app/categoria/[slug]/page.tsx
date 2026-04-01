@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 type Props = {
   params: Promise<{ slug: string }>
-  searchParams: Promise<Record<string, string | undefined>>
+  searchParams: any
 }
 
 export default async function CategoriaPage({ params, searchParams }: Props) {
   const { slug } = await params
-  const { brand } = await searchParams
+  const { brand } = searchParams
 
   // 1. categoria
   const { data: category } = await supabase
