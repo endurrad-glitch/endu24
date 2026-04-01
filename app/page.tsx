@@ -1,4 +1,4 @@
-import { HomepageHero } from '@/components/home/HomepageHero'
+import { HeroSlider } from '@/components/home/HeroSlider'
 import { CategoryGrid } from '@/components/home/CategoryGrid'
 import { ProductGrid } from '@/components/home/ProductGrid'
 import { DealsCarousel } from '@/components/home/DealsCarousel'
@@ -32,12 +32,14 @@ export default async function HomePage() {
 
   return (
     <main className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-4">
-      <HomepageHero />
+      <HeroSlider />
       <section id="categorie">
         <CategoryGrid categories={categories} />
       </section>
       <ProductGrid products={trending} />
-      <DealsCarousel products={featuredDeals.length ? featuredDeals : popularFromCategories} />
+      <section id="offerte">
+        <DealsCarousel products={featuredDeals.length ? featuredDeals : popularFromCategories} />
+      </section>
       <TrustSection products={products.length} shops={12} />
     </main>
   )

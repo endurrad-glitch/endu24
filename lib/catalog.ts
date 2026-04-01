@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { cache } from 'react'
+import { createClient } from '@supabase/supabase-js'
 import type { Product } from '@/lib/products'
 
 export type FlatCategory = {
@@ -19,13 +20,40 @@ const CATEGORIES_PATH = process.env.CATEGORIES_DATA_FILE
   ? path.resolve(process.cwd(), process.env.CATEGORIES_DATA_FILE)
   : path.join(process.cwd(), 'data/catalog/categories.json')
 
-async function loadCategoriesInternal(): Promise<FlatCategory[]> {
-  const raw = await fs.readFile(CATEGORIES_PATH, 'utf8')
-  const parsed = JSON.parse(raw) as FlatCategory[]
-
-  return parsed
+function normalizeAndSortCategories(categories: FlatCategory[]): FlatCategory[] {
+  return categories
     .filter((category) => category.id && category.name && category.slug)
     .sort((a, b) => a.level - b.level || a.name.localeCompare(b.name, 'it'))
+}
+
+async function loadCategoriesFromSupabase(): Promise<FlatCategory[] | null> {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+
+  if (!supabaseUrl || !serviceRoleKey) return null
+
+  const supabase = createClient(supabaseUrl, serviceRoleKey)
+  const { data, error } = await supabase
+    .from('categories')
+    .select('id,name,slug,parent_id,level')
+    .order('level', { ascending: true })
+    .order('name', { ascending: true })
+
+  if (error || !data) return null
+
+  return normalizeAndSortCategories(data as FlatCategory[])
+}
+
+async function loadCategoriesFromFile(): Promise<FlatCategory[]> {
+  const raw = await fs.readFile(CATEGORIES_PATH, 'utf8')
+  const parsed = JSON.parse(raw) as FlatCategory[]
+  return normalizeAndSortCategories(parsed)
+}
+
+async function loadCategoriesInternal(): Promise<FlatCategory[]> {
+  const fromSupabase = await loadCategoriesFromSupabase()
+  if (fromSupabase && fromSupabase.length) return fromSupabase
+  return loadCategoriesFromFile()
 }
 
 export const getFlatCategories = cache(loadCategoriesInternal)
