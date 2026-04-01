@@ -5,8 +5,11 @@ declare namespace React {
 declare module 'react' {
   export type ReactNode = any
   export type FormEvent = any
+  export type KeyboardEvent<T = any> = any
   export function useState<T = any>(initial: T): [T, (value: T | ((prev: T) => T)) => void]
   export function useEffect(effect: () => void | (() => void), deps?: any[]): void
+  export function useMemo<T>(factory: () => T, deps?: any[]): T
+  export function useRef<T>(value: T): { current: T }
 }
 
 declare module 'react/jsx-runtime' {
@@ -35,6 +38,7 @@ declare module 'next/link' {
 
 declare module 'next/navigation' {
   export function useRouter(): { push: (url: string) => void }
+  export function notFound(): never
 }
 
 declare module '@supabase/supabase-js' {
@@ -42,3 +46,19 @@ declare module '@supabase/supabase-js' {
 }
 
 declare const process: any
+
+
+declare module 'node:fs/promises' {
+  const fs: any
+  export default fs
+}
+
+declare module 'node:path' {
+  const path: any
+  export default path
+}
+
+
+declare module 'next/server' {
+  export const NextResponse: { json: (data: any) => any }
+}

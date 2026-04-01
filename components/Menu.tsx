@@ -2,10 +2,17 @@
 
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+
+type CategoryNode = {
+  id: number
+  slug: string
+  name: string
+  children: CategoryNode[]
+}
 import { getCategoriesTree } from '@/lib/getCategories'
 
 export default function Menu() {
-  const [categories, setCategories] = useState<any[]>([])
+  const [categories, setCategories] = useState<CategoryNode[]>([])
 
   useEffect(() => {
     const load = async () => {
@@ -41,7 +48,7 @@ export default function Menu() {
                 }}
                 className="submenu"
               >
-                {cat.children.map((child: any) => (
+                {cat.children.map((child) => (
                   <li key={child.id} style={{ marginBottom: 10 }}>
                     <Link href={`/categoria/${child.slug}`}>
                       {child.name}
@@ -50,7 +57,7 @@ export default function Menu() {
                     {/* NIPOTI */}
                     {child.children?.length > 0 && (
                       <ul style={{ marginLeft: 15 }}>
-                        {child.children.map((sub: any) => (
+                        {child.children.map((sub) => (
                           <li key={sub.id}>
                             <Link href={`/categoria/${sub.slug}`}>
                               {sub.name}
