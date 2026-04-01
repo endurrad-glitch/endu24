@@ -51,3 +51,47 @@ Per input specifico:
 ```bash
 node scripts/import-catalog.mjs --source csv --input data/products_export.csv --brand loboo
 ```
+
+## Maintenance mode (Vercel-ready)
+
+Il progetto supporta una maintenance mode centralizzata tramite `proxy.ts`.
+
+### Attivazione / disattivazione
+
+1. Imposta la variabile ambiente:
+
+```bash
+MAINTENANCE_MODE=true
+```
+
+2. Deploy su Vercel (o riavvio locale) per applicare la modifica.
+
+Per tornare online:
+
+```bash
+MAINTENANCE_MODE=false
+```
+
+### Comportamento
+
+- con `MAINTENANCE_MODE=true` tutte le route applicative vengono riscritte su `/maintenance`
+- restano accessibili asset statici e path tecnici (`/_next`, `/api`, file pubblici)
+- evita loop grazie all'esclusione esplicita di `/maintenance`
+
+
+### Step 2 (opzionale): bypass admin privato
+
+Per vedere il sito reale anche con maintenance attiva, imposta anche:
+
+```bash
+MAINTENANCE_ADMIN_TOKEN=metti_un_token_lungo_e_segreto
+```
+
+Poi apri una URL del sito con query token:
+
+```
+https://endu24.com/?maintenance=metti_un_token_lungo_e_segreto
+```
+
+Il proxy imposterà un cookie `httpOnly` di bypass (12 ore) e ti reindirizzerà alla stessa pagina senza query string.
+Da quel momento vedrai il sito normale, mentre i visitatori non autenticati continueranno a vedere `/maintenance`.
