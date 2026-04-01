@@ -1,5 +1,14 @@
 import { supabase } from '@/lib/supabase'
 
+type CategoryNode = {
+  id: number
+  parent_id: number | null
+  name: string
+  slug: string
+  level?: number
+  children: CategoryNode[]
+}
+
 export async function getCategoriesTree() {
   const { data } = await supabase
     .from('categories')
@@ -8,20 +17,18 @@ export async function getCategoriesTree() {
 
   if (!data) return []
 
-  const map = new Map()
-  const tree: any[] = []
+  const map = new Map<number, CategoryNode>()
+  const tree: CategoryNode[] = []
 
-  // crea mappa
   data.forEach((cat) => {
     map.set(cat.id, { ...cat, children: [] })
   })
 
-  // costruisci albero
   data.forEach((cat) => {
     if (cat.parent_id) {
-      map.get(cat.parent_id)?.children.push(map.get(cat.id))
+      map.get(cat.parent_id)?.children.push(map.get(cat.id) as CategoryNode)
     } else {
-      tree.push(map.get(cat.id))
+      tree.push(map.get(cat.id) as CategoryNode)
     }
   })
 
