@@ -1,0 +1,48 @@
+import fs from 'fs'
+import csv from 'csv-parser'
+import { createClient } from '@supabase/supabase-js'
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_SERVICE_ROLE_KEY
+)
+
+const rows = []
+
+fs.createReadStream('./data/products_export.csv')
+  .pipe(csv())
+  .on('data', (row) => rows.push(row))
+  .on('end', async () => {
+    for (const row of rows) {
+      const payload = {
+        external_id: row.id || row.ID || null,
+        slug: row.slug || null,
+        name: row.name || row.title || null,
+        brand: row.brand || null,
+        category: row.category || null,
+        image: row.image || row.image_url || null,
+        description_html: row.description || row.body_html || null,
+        specs_raw: row.specs ? safeJson(row.specs) : null,
+        price: row.price ? Number(row.price) : null,
+        store: row.store || null,
+        offer_url: row.url || row.offer_url || null,
+      }
+
+      const { error } = await supabase.from('product_imports').insert(payload)
+      if (error) {
+        console.error('Import error:', payload.slug, error.message)
+      } else {
+        console.log('Imported:', payload.slug)
+      }
+    }
+
+    console.log('Import completato')
+  })
+
+function safeJson(value) {
+  try {
+    return JSON.parse(value)
+  } catch {
+    return null
+  }
+}

@@ -1,0 +1,380 @@
+Handle,Title,Body (HTML),Vendor,Product Category,Type,Tags,Published,Option1 Name,Option1 Value,Option1 Linked To,Option2 Name,Option2 Value,Option2 Linked To,Option3 Name,Option3 Value,Option3 Linked To,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Unit Price Total Measure,Unit Price Total Measure Unit,Unit Price Base Measure,Unit Price Base Measure Unit,Variant Barcode,Image Src,Image Position,Image Alt Text,Gift Card,SEO Title,SEO Description,Google Shopping / Google Product Category,Google Shopping / Gender,Google Shopping / Age Group,Google Shopping / MPN,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Aggiornato seo (product.metafields.custom.aggiornato_seo),Descr Img Prod (product.metafields.custom.descr_img_prod),DIMENSIONI (L.H.P.) (product.metafields.custom.dimensioni_l_h_p),Faqs Prodotto (product.metafields.custom.faqs_prodotto),Faq D1 (product.metafields.custom.faq_d),Faq D2 (product.metafields.custom.faq_d2),Faq D3 (product.metafields.custom.faq_d3),Faq D4 (product.metafields.custom.faq_d4),Faq D5 (product.metafields.custom.faq_d5),Flusso luminoso totale (product.metafields.custom.flusso_luminoso_totale),Waterproof (product.metafields.custom.impermeabilit_),Marca Moto (product.metafields.custom.make_list),Materiale (product.metafields.custom.materiale),MetaSeoProd (product.metafields.custom.metaseoprod),Modalità funzionamento (product.metafields.custom.modalit_funzionamento),Peso (product.metafields.custom.peso),Potenza (product.metafields.custom.potenza),Product icons (product.metafields.custom.product_icons),Quantità (product.metafields.custom.quantit_),TabellaProdotto (product.metafields.custom.tabellaprodotto),Temperatura Colore (product.metafields.custom.temperatura_colore),Volume Lt. (product.metafields.custom.volume_lt_),Year from (product.metafields.custom.year_from),Year to (product.metafields.custom.year_to),Youtube Link (product.metafields.custom.youtube_link),Numero di valutazioni del prodotto (product.metafields.reviews.rating_count),Dimensioni dell'accessorio (product.metafields.shopify.accessory-size),Età (product.metafields.shopify.age-group),Funzionalità della borsa/custodia (product.metafields.shopify.bag-case-features),Materiale borsa/custodia (product.metafields.shopify.bag-case-material),Funzionalità di conservazione della borsa/custodia (product.metafields.shopify.bag-case-storage-features),Tipo di borsa (product.metafields.shopify.bag-type),Opzioni di trasporto (product.metafields.shopify.carry-options),Tipo di caricabatterie (product.metafields.shopify.charger-type),Color (product.metafields.shopify.color-pattern),Funzionalità del dispositivo di comunicazione (product.metafields.shopify.communication-device-features),Tipo di connessione (product.metafields.shopify.connection-type),Tecnologia di connettività (product.metafields.shopify.connectivity-technology),Funzionalità della copertina (product.metafields.shopify.cover-features),Materiale del rivestimento (product.metafields.shopify.cover-material),Tipo di copertura (product.metafields.shopify.cover-type),Tessuto (product.metafields.shopify.fabric),Funzionalità (product.metafields.shopify.features),Tipo di vestibilità (product.metafields.shopify.fit-type),Tipo di indicatore (product.metafields.shopify.gauge-type),Materiale per la manifattura (product.metafields.shopify.handwear-material),Condizione dell’articolo (product.metafields.shopify.item-condition),Materiale dell'articolo (product.metafields.shopify.item-material),Sorgente luminosa (product.metafields.shopify.light-source),Funzionalità di illuminazione (product.metafields.shopify.lighting-features),Tipo di produttore (product.metafields.shopify.manufacturer-type),Materiale (product.metafields.shopify.material),Funzionalità di montaggio/supporto (product.metafields.shopify.mount-stand-features),Funzionalità specializzate del lettore/registratore (product.metafields.shopify.player-recorder-specialized-features),Fonte di alimentazione (product.metafields.shopify.power-source),Funzionalità dell'equipaggiamento protettivo (product.metafields.shopify.protective-gear-features),Materiale dell'attrezzatura di sicurezza (product.metafields.shopify.safety-equipment-material),Genere di destinazione (product.metafields.shopify.target-gender),Area di applicazione del veicolo (product.metafields.shopify.vehicle-application-area),Funzionalità di guida/gestione del veicolo (product.metafields.shopify.vehicle-drive-handling-features),Funzionalità del veicolo (product.metafields.shopify.vehicle-features),Funzionalità del telaio/carrozzeria del veicolo (product.metafields.shopify.vehicle-frame-body-features),Design dello specchietto del veicolo (product.metafields.shopify.vehicle-mirror-design),Funzionalità dello specchietto del veicolo (product.metafields.shopify.vehicle-mirror-features),Tipo di specchietto per veicolo (product.metafields.shopify.vehicle-mirror-type),Tipo di veicolo (product.metafields.shopify.vehicle-type),Prodotti complementari (product.metafields.shopify--discovery--product_recommendation.complementary_products),Prodotti correlati (product.metafields.shopify--discovery--product_recommendation.related_products),Impostazioni dei prodotti correlati (product.metafields.shopify--discovery--product_recommendation.related_products_display),Boost dei prodotti per la ricerca (product.metafields.shopify--discovery--product_search_boost.queries),Highlighted Product (product.metafields.theme.highlight),Variant Image,Variant Weight Unit,Variant Tax Code,Cost per item,Status
+sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67,Coppia Sensori TPMS Moto Bluetooth JADO - Monitoraggio Pressione Gomme IP67,"<h2>Mai più imprevisti: Tieni sotto controllo la salute delle tue gomme</h2>
+<p>La pressione degli pneumatici è il fattore numero uno per la sicurezza in moto, influenzando tenuta di strada, frenata e consumi. Con i <strong>Sensori TPMS Bluetooth JADO</strong>, trasformi la tua moto in un veicolo smart, monitorando in tempo reale lo stato delle tue gomme direttamente sul tuo dispositivo JADO o smartphone compatibile.</p>
+<p>Questi sensori esterni sostituiscono i semplici tappini delle valvole e trasmettono dati precisi via Bluetooth. Grazie alla certificazione <strong>IP67</strong>, sono progettati per affrontare pioggia battente, guadi e polvere senza smettere mai di funzionare.</p>
+<h3>Perché sono essenziali?</h3>
+<ul>
+<li>
+<strong>Sicurezza Attiva:</strong> Allarmi immediati per forature o bassa pressione.</li>
+<li>
+<strong>Risparmio:</strong> Gomme alla giusta pressione durano di più e consumano meno benzina.</li>
+<li>
+<strong>Plug &amp; Play:</strong> Installazione esterna in 2 minuti senza gommista.</li>
+</ul>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Display Carplay,Nuovi Arrivi,true,Title,Default Title,,,,,,,,A-TR-A,0.0,shopify,deny,manual,47.00,,true,true,,,,,751654272953,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-tpms-sensor-moto-bluetooth-ip67-9703280.png?v=1763056778,1,JADO TPMS Sensore Moto Bluetooth IP67 - ENDURRAD,false,Sensori TPMS Moto Bluetooth JADO | Controllo Pressione IP67,"Monitora pressione e temperatura gomme in tempo reale con i sensori TPMS JADO. Bluetooth, impermeabili IP67 e facili da installare. Previeni forature e guida sicuro.",5613,,,,,,,,,,,,,,,Serve smontare la gomma per installarli?,I sensori sono resistenti all'acqua?,La batteria si può cambiare?,Devo far equilibrare le ruote dopo il montaggio?,Sono compatibili con il mio navigatore JADO?,,,,,,,,,,1 coppia,"<details open style=""margin-bottom: 10px; border: 1px solid #e0e0e0; border-radius: 4px;"">
+      <summary style=""background-color: #f9f9f9; padding: 15px; cursor: pointer; font-weight: bold; list-style: none;"">
+        <h2>SPECIFICHE TECNICHE</h2>
+      </summary>
+      <div style=""padding: 15px;"">
+        <table width=""100%"" style=""border-collapse: collapse;"">
+          <tbody>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Tecnologia</td>
+              <td style=""padding: 10px;"">Bluetooth 5.0 (BLE)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Impermeabilità</td>
+              <td style=""padding: 10px;"">IP67 (Waterproof)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Range Pressione</td>
+              <td style=""padding: 10px;"">0 - 6.0 Bar</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Tipo Batteria</td>
+              <td style=""padding: 10px;"">CR1632 (Sostituibile)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Sicurezza</td>
+              <td style=""padding: 10px;"">Dado antifurto incluso</td>
+            </tr>
+            <tr>
+              <td style=""padding: 10px; font-weight: bold;"">Compatibilità</td>
+              <td style=""padding: 10px;"">Sistemi JADO / App Compatibili</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>",,,,,,,,,,,,,,,black,,,,,,,,,,pressione; temperatura,,new,,,,aftermarket,,,,,,,,,,,,,,,,telecamera-moto-jado-1080p-sensore-sony-imx307-starvis; telecomando-bluetooth-da-manubrio-per-jado-s6-s1; monitor-moto-carplay-android-auto-dashcam-jado-s6; supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione; modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale,,,"JADO TPMS moto Bluetooth IP67
+sensore pressione gomme moto JADO TPMS
+monitoraggio pressione pneumatici moto JADO
+kit TPMS JADO per moto 2 sensori
+sensori esterni TPMS moto JADO impermeabili
+JADO TPMS lettura pressione e temperatura moto
+TPMS moto Bluetooth con app JADO
+sensore pneumatici moto JADO IP67 universale
+sistema controllo pressione gomme moto JADO
+JADO TPMS installazione valvola moto",,,kg,,24.00,active
+telecamera-moto-jado-1080p-sensore-sony-imx307-starvis,Telecamera Moto Supplementare JADO 1080p FHD - Sensore Sony IMX307 Starvis (Visione Notturna),"<h2>Cattura ogni dettaglio, anche al buio: La potenza del sensore Sony IMX307</h2>
+<p>Migliora la qualità delle tue registrazioni o sostituisci una telecamera danneggiata con l'unità ottica originale <strong>JADO equipaggiata con sensore Sony IMX307</strong>. Questa non è una semplice telecamera, ma un occhio tecnologico progettato per garantire nitidezza cristallina in Full HD 1080p, fondamentale per leggere targhe e dettagli in caso di incidente.</p>
+<p>Il vero vantaggio risiede nella tecnologia <strong>Starvis di Sony</strong>: questo sensore è ottimizzato per catturare luce anche in condizioni di scarsissima luminosità. Che tu stia guidando in una galleria buia o di notte in città, la JADO IMX307 garantisce filmati luminosi e definiti.</p>
+<h3>Punti di Forza:</h3>
+<ul>
+<li>
+<strong>Visione Notturna (Night Vision):</strong> Sensore Sony Starvis per riprese chiare anche con poca luce.</li>
+<li>
+<strong>Risoluzione FHD:</strong> 1080p reale per la massima definizione delle targhe.</li>
+<li>
+<strong>IP68 Waterproof:</strong> Progettata per resistere a qualsiasi condizione meteo.</li>
+</ul>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,Nuovi Arrivi,true,Title,Default Title,,,,,,,,A-SXT-A-2,0.0,shopify,deny,manual,95.00,,true,true,,,,,800402625883,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-camera-2mp-sony-imx307-8725179.png?v=1763056779,1,Telecamera Moto Supplementare JADO 1080p FHD - Sensore Sony IMX307 Starvis (Visione Notturna),false,Telecamera Moto JADO 1080p | Sensore Sony IMX307 Starvis,"Telecamera di ricambio o aggiuntiva per sistemi JADO. Risoluzione 1080p FHD, sensore Sony IMX307 per una visione notturna superiore e grandangolo 150°. IP68.",5613,,,,,,,,,,,,,,,Questa telecamera funziona da sola?,"Cosa significa sensore ""Sony IMX307 Starvis""?",È compatibile come telecamera posteriore?,Resiste ai lavaggi con lancia a pressione?,La qualità è 1080p reale?,,IP67,,,,,,,,2,"<details open style=""margin-bottom: 10px; border: 1px solid #e0e0e0; border-radius: 4px;"">
+      <summary style=""background-color: #f9f9f9; padding: 15px; cursor: pointer; font-weight: bold; list-style: none;"">
+        <h2>SPECIFICHE TECNICHE</h2>
+      </summary>
+      <div style=""padding: 15px;"">
+        <table width=""100%"" style=""border-collapse: collapse;"">
+          <tbody>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Modello Sensore</td>
+              <td style=""padding: 10px;"">Sony IMX307 (Starvis Technology)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Risoluzione</td>
+              <td style=""padding: 10px;"">Full HD 1080P (1920x1080)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Angolo di Visione</td>
+              <td style=""padding: 10px;"">150° Grandangolare</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Apertura</td>
+              <td style=""padding: 10px;"">F1.8</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Impermeabilità</td>
+              <td style=""padding: 10px;"">IP68 (Waterproof)</td>
+            </tr>
+            <tr>
+              <td style=""padding: 10px; font-weight: bold;"">Compatibilità</td>
+              <td style=""padding: 10px;"">Sistemi DVR JADO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>",,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,,,,,,,,,,,telecamera-posteriore,,,,,,monitor-moto-carplay-android-auto-dashcam-jado-s6; sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67; modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale; supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione; telecomando-bluetooth-da-manubrio-per-jado-s6-s1,,,"Telecamera Sony IMX307
+Dashcam moto 1080p
+Ricambi JADO
+Telecamera visione notturna moto
+Camera moto IP68
+Sensore Starvis moto
+Telecamera posteriore moto
+Obiettivo grandangolare moto
+JADO camera replacement
+Accessori DVR moto",,,kg,,47.00,active
+telecomando-bluetooth-da-manubrio-per-jado-s6-s1,Telecomando Bluetooth da Manubrio per JADO S6/S1 - Controller Wireless Moto Impermeabile,"<h2>Il controllo totale della tua guida, a portata di pollice</h2>
+<p>Massimizza la sicurezza e la comodità durante i tuoi viaggi in moto con il <strong>Telecomando Wireless JADO Moto</strong>. Progettato specificamente per integrarsi con i sistemi di navigazione intelligenti <strong>JADO S6 e S1</strong>, questo controller ti permette di gestire chiamate, musica e navigazione senza mai togliere le mani dalle manopole.</p>
+<p>Dimentica la distrazione del touchscreen mentre sei in movimento. Grazie ai pulsanti in rilievo, ottimizzati per l'uso con i guanti, potrai interagire con il tuo sistema CarPlay o Android Auto in totale sicurezza, mantenendo il focus sulla strada.</p>
+<h3>Perché aggiungerlo al tuo setup?</h3>
+<ul>
+<li>
+<strong>Sicurezza attiva:</strong> Gestisci il dispositivo senza distogliere lo sguardo o la presa dalla strada.</li>
+<li>
+<strong>Integrazione nativa:</strong> Pairing immediato con schermi JADO S6 e S1.</li>
+<li>
+<strong>Design robusto:</strong> Costruzione impermeabile pronta per l'avventura.</li>
+</ul>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,Nuovi Arrivi,true,Title,Default Title,,,,,,,,A-KZQ-A,0.0,shopify,deny,manual,47.00,,true,true,,,,,800402625869,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-remote-telecomando-manubrio-moto-4751920.png?v=1763056733,1,Telecomando Bluetooth da Manubrio per JADO S6/S1 - Controller Wireless Moto Impermeabile,false,Telecomando Moto Bluetooth | Controllo Wireless JADO S6/S1,"Controlla il tuo sistema JADO S6 o S1 senza staccare le mani dal manubrio. Telecomando Bluetooth impermeabile, tasti adatti ai guanti e facile installazione.",5613,,,,,,,,,,,,,,,Questo telecomando funziona con qualsiasi telefono?,È difficile da installare? Devo collegare dei cavi?,Posso usarlo sotto la pioggia?,Come si alimenta il telecomando?,I tasti si riescono a premere con i guanti invernali?,,,,,,,,,,1,"<details open style=""margin-bottom: 10px; border: 1px solid #e0e0e0; border-radius: 4px;"">
+      <summary style=""background-color: #f9f9f9; padding: 15px; cursor: pointer; font-weight: bold; list-style: none;"">
+       <h2>SPECIFICHE TECNICHE</h2>
+      </summary>
+      <div style=""padding: 15px;"">
+        <table width=""100%"" style=""border-collapse: collapse;"">
+          <tbody>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Connettività</td>
+              <td style=""padding: 10px;"">Bluetooth 5.0 Low Energy</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Compatibilità Sistema</td>
+              <td style=""padding: 10px;"">JADO S6, JADO S1</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Montaggio Manubrio</td>
+              <td style=""padding: 10px;"">Universale (include adattatori 22-28mm)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Materiale</td>
+              <td style=""padding: 10px;"">ABS Rinforzato + Silicone</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Impermeabilità</td>
+              <td style=""padding: 10px;"">IP65 (Resistente pioggia/polvere)</td>
+            </tr>
+            <tr>
+              <td style=""padding: 10px; font-weight: bold;"">Alimentazione</td>
+              <td style=""padding: 10px;"">Batteria interna a lunga durata</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>",,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,aftermarket; di-terze-parti,,,,alimentato-a-batteria,,,,,,,,,,,,sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67; telecamera-moto-jado-1080p-sensore-sony-imx307-starvis; monitor-moto-carplay-android-auto-dashcam-jado-s6; modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale; supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione,,,"telecomando manubrio JADO Remote moto
+JADO Remote manubrio accessorio moto
+JADO Remote controllo manubrio moto universale
+telecomando JADO Remote manubrio per moto compatibile
+JADO Remote manubrio wireless moto
+Remote manubrio JADO telecomando per moto
+JADO Remote manubrio bluetooth moto
+JADO Remote telecomando manubrio motociclo JADO
+JADO Remote manubrio compatibile casco accessori
+telecomando manubrio JADO Remote installazione moto",,,kg,,23.27,active
+monitor-moto-carplay-android-auto-dashcam-jado-s6,"Jado S6 – Monitor Moto 6"" Wireless con CarPlay, Android Auto","<h2>Smetti di rovinare la fotocamera del tuo iPhone. Jado S6 trasforma il cruscotto della tua moto portando Apple CarPlay e Android Auto in modalità wireless. Tieni il telefono al sicuro in tasca e usa Waze, Google Maps, Spotify e le chiamate direttamente su uno schermo da 6 pollici ultra-luminoso, progettato per essere visto anche sotto il sole diretto di mezzogiorno.</h2>
+<p><br><strong>N.B.</strong><br><strong>Compatibilità e lettura dati BMW per modelli:</strong><br><strong>BMW R 1250 GS / ADV dal 2018 -&gt;</strong><br><strong><meta charset=""utf-8""> BMW R 13000 GS / ADV dal 2023 -&gt;</strong></p>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Display Carplay,"JADO, Nuovi Arrivi, S6",true,Title,Default Title,,,,,,,,S6,0.0,shopify,deny,manual,380.00,,true,true,,,,,"",https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-s6-sistema-di-guida-moto-smart-2817968.png?v=1763891466,1,JADO S6 sistema di guida moto smart - ENDURRAD,false,Monitor Moto CarPlay & Android Auto con Dashcam Integrata | Jado S6,"Aggiorna la tua moto con Apple CarPlay e Android Auto. Display 6"" ultra-luminoso (1800 nit), impermeabile IP69K e doppia Dashcam Sony. Compatibile con rotellone BMW. 🚚 Pre-ordina ora su Endurrad!",505766,,,,,,,,,,,,,,,,,,,,,,,,sistema-di-guida-moto-smart-con-display-6-car-play-e-dashcam,,,,6; carplay; android-auto; waterproof-ip-69-k; 1800-nit; 5-3; wi-fi-2-4-5-g-hz,,,,,,,,4,,,,,,,,,black,,,,,,,,,,,,new,,,,oem; aftermarket,,,smart; on-screen-display; recording-function,impianto-elettrico-del-veicolo; usb; alimentato-in-cc,,,,,,,,,,,,modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale; telecamera-moto-jado-1080p-sensore-sony-imx307-starvis; sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67; telecomando-bluetooth-da-manubrio-per-jado-s6-s1; supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione,,,"JADO S6 sistema smart moto
+dashcam moto JADO S6
+kit telecamera anteriore posteriore JADO S6
+registratore di guida moto JADO S6
+display/monitor JADO S6 per moto
+JADO S6 con app smartphone (Bluetooth/Wi-Fi)
+navigazione e comandi vocali JADO S6
+sistema sicurezza moto JADO S6
+installazione kit JADO S6 moto
+accessori JADO S6 per moto",,,kg,,155.30,active
+monitor-moto-carplay-android-auto-dashcam-jado-s6,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-s6-monitor-moto-6-wireless-con-carplay-android-auto-3536815.png?v=1770430812,2,"Jado S6 – Monitor Moto 6"" Wireless con CarPlay, Android Auto - ENDURRAD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale,Modulo Quick Release Dedicato per Jado S6 compatibile con BMW (Predisposizione Originale),"<h2>Integrazione perfetta per il tuo Jado S6 su BMW</h2>
+<p>Massimizza il potenziale del tuo smart monitor <strong>Jado S6 (CarPlay &amp; Android Auto)</strong> integrandolo perfettamente sulla tua BMW. Questo modulo a sgancio rapido è progettato specificamente per sfruttare la <strong>predisposizione originale del navigatore (Cradle)</strong>, eliminando la necessità di supporti universali ingombranti sul manubrio.</p>
+<h3>Perché scegliere questo modulo dedicato?</h3>
+<ul style=""margin-bottom: 30px;"">
+<li>
+<strong>Zero Vibrazioni:</strong> Fissaggio solido che garantisce riprese stabili della Dashcam integrata.</li>
+<li>
+<strong>Look OEM:</strong> Posizione centrale sopra la strumentazione TFT, esattamente dove previsto da BMW.</li>
+<li>
+<strong>Sicurezza:</strong> Sistema ""Quick Release"" per rimuovere il monitor in un secondo quando parcheggi la moto.</li>
+<li>
+<strong>Nessuna Modifica:</strong> Non serve forare, tagliare cavi o aggiungere braccetti al manubrio.</li>
+</ul>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Display Carplay,"JADO, Nuovi Arrivi, S6",true,Title,Default Title,,,,,,,,BMKC,0.0,shopify,deny,manual,92.00,,true,true,,,,,800402625876,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale-3809575.png?v=1767447848,1,Modulo Quick Release Dedicato per Jado S6 compatibile con BMW (Predisposizione Originale) - ENDURRAD,false,Modulo Supporto Jado S6 per BMW | Sgancio Rapido per Predisposizione Originale,"Adattatore per montare monitor Jado S6 sulla base originale BMW Navigator. Stabile, plug & play e senza vibrazioni. Compatibile con R1250GS, R1200GS e S1000XR.",505766,,,,,,,,,,,,,,,A cosa serve il modulo Quick-Release dedicato per BMW?,È compatibile con tutte le moto BMW?,Serve alimentazione o lettura dati integrata?,Come si installa il modulo Quick-Release?,Posso rimuovere il dispositivo facilmente quando parcheggio?,,,BMW,,,,,,,,"
+<h2>SPECIFICHE TECNICHE</h2>
+<div>
+<table style=""width: 100%; border-collapse: collapse; margin-top: 10px;"">
+<tbody>
+<tr style=""background-color: #f9f9f9;"">
+<td style=""padding: 10px; border: 1px solid #ddd; font-weight: bold;"">Prodotto</td>
+<td style=""padding: 10px; border: 1px solid #ddd;"">Adattatore Quick Release per Jado S6</td>
+</tr>
+<tr>
+<td style=""padding: 10px; border: 1px solid #ddd; font-weight: bold;"">Compatibilità Moto</td>
+<td style=""padding: 10px; border: 1px solid #ddd;"">BMW R1200GS/ADV, R1250GS/ADV, S1000XR, F850GS (Con predisposizione GPS)</td>
+</tr>
+<tr style=""background-color: #f9f9f9;"">
+<td style=""padding: 10px; border: 1px solid #ddd; font-weight: bold;"">Materiale</td>
+<td style=""padding: 10px; border: 1px solid #ddd;"">Polimero ABS Automotive High-Grade</td>
+</tr>
+<tr>
+<td style=""padding: 10px; border: 1px solid #ddd; font-weight: bold;"">Sistema di Aggancio</td>
+<td style=""padding: 10px; border: 1px solid #ddd;"">Click-in su base originale BMW</td>
+</tr>
+<tr style=""background-color: #f9f9f9;"">
+<td style=""padding: 10px; border: 1px solid #ddd; font-weight: bold;"">Contenuto Confezione</td>
+<td style=""padding: 10px; border: 1px solid #ddd;"">1x Modulo Adattatore, Viteria di fissaggio al monitor</td>
+</tr>
+</tbody>
+</table>
+</div>",,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,oem; aftermarket,,,smart,impianto-elettrico-del-veicolo; usb; alimentato-in-cc,,,,,,,,,,,,telecamera-moto-jado-1080p-sensore-sony-imx307-starvis; telecomando-bluetooth-da-manubrio-per-jado-s6-s1; sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67,,,"Supporto Jado S6 BMW
+Adattatore Cradle BMW
+CarPlay Moto R1250GS
+Staffa Sgancio Rapido Jado
+Alternativa Navigator VI
+Monitor Android Auto BMW
+Supporto Dashcam Moto BMW
+Adattatore Navigatore Originale
+Jado Moto BMW GS
+Accessori Tech BMW Motorrad",,,kg,,42.15,active
+supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione,Supporto Moto Cannotto Sterzo a Espansione (12-30mm) per Sportive - Alluminio Anti-Vibrazione,"<h2>Il supporto definitivo per la tua moto sportiva</h2>
+<p>Sei alla ricerca di una soluzione solida e sicura per montare il tuo smartphone o navigatore GPS sulla tua moto sportiva? Il nostro <strong>Supporto a Espansione per Cannotto di Sterzo</strong> è progettato specificamente per chi esige stabilità ad alta velocità senza compromettere l'estetica della moto.</p>
+<p>Realizzato in lega di alluminio di alta qualità, questo supporto utilizza un avanzato sistema di ancoraggio a espansione che si fissa saldamente all'interno del foro del cannotto di sterzo (forcella). È la scelta ideale per le moto con semimanubri dove lo spazio è limitato.</p>
+<h3>Perché sceglierlo?</h3>
+<ul>
+<li>
+<strong>Stabilità Assoluta:</strong> Il meccanismo a espansione elimina le oscillazioni, garantendo una visione chiara del display anche su terreni sconnessi.</li>
+<li>
+<strong>Design Pulito:</strong> Mantiene il profilo sportivo della tua moto grazie a un ingombro minimo (Low-Profile).</li>
+<li>
+<strong>Compatibilità Universale:</strong> Si adatta alla maggior parte delle moto sportive e racing con fori del cannotto da 12mm a 30mm.</li>
+</ul>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Display Carplay,"JADO, Nuovi Arrivi, S6",true,Title,Default Title,,,,,,,,B3,0.0,shopify,deny,manual,25.00,,true,true,,,,,800402625876,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione-5586691.png?v=1767447848,1,Supporto Moto Cannotto Sterzo a Espansione (12 - 30mm) per Sportive - Alluminio Anti - Vibrazione - ENDURRAD,false,Supporto Moto Cannotto Sterzo 12-30mm | Staffa GPS Sportive,"Supporto smartphone e GPS per moto sportive con foro cannotto 12-30mm. Sistema a espansione stabile, alluminio anti-vibrazione e design low-profile. Acquista ora!",505766,,,,,,,,,,,,,,,Questo supporto è compatibile con la mia moto?,Il sistema a espansione è sicuro alle alte velocità?,Ho bisogno di attrezzi particolari per il montaggio?,Il supporto protegge il telefono dalle vibrazioni?,Cosa succede se cambio moto?,,,,,,,,,,,"<details open style=""margin-bottom: 10px; border: 1px solid #e0e0e0; border-radius: 4px;"">
+      <summary style=""background-color: #f9f9f9; padding: 15px; cursor: pointer; font-weight: bold; list-style: none;"">
+        <h2>SPECIFICHE TECNICHE</h2>
+      </summary>
+      <div style=""padding: 15px;"">
+        <table width=""100%"" style=""border-collapse: collapse;"">
+          <tbody>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Materiale</td>
+              <td style=""padding: 10px;"">Lega di Alluminio ad alta resistenza</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Diametro Foro Compatibile</td>
+              <td style=""padding: 10px;"">12 mm - 30 mm</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Profondità Minima Foro</td>
+              <td style=""padding: 10px;"">&gt; 38 mm</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Tipo di Montaggio</td>
+              <td style=""padding: 10px;"">Sistema a espansione (Triple Tree)</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Compatibilità Moto</td>
+              <td style=""padding: 10px;"">Moto Sportive, Racing, Carene con semimanubri</td>
+            </tr>
+            <tr style=""border-bottom: 1px solid #eee;"">
+              <td style=""padding: 10px; font-weight: bold;"">Resistenza</td>
+              <td style=""padding: 10px;"">Pioggia, polvere, temperature estreme</td>
+            </tr>
+            <tr>
+              <td style=""padding: 10px; font-weight: bold;"">Garanzia</td>
+              <td style=""padding: 10px;"">2 Anni (Accessori)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </details>",,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,oem; aftermarket,,,smart,,,,,,,,,,,,,telecamera-moto-jado-1080p-sensore-sony-imx307-starvis; telecomando-bluetooth-da-manubrio-per-jado-s6-s1; sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67; modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale,,,"Supporto smartphone moto sportiva
+Porta cellulare per semimanubri
+Supporto GPS moto racing
+Porta telefono cannotto sterzo
+Staffa piastra sterzo moto
+Supporto a espansione moto
+Attacco forcella 12-30mm
+Supporto moto anti vibrazione
+Staffa centrale moto sportiva
+Supporto telefono moto alluminio",,,kg,,12.50,active
+supporto-crossbar-moto-o12-16-mm-staffa-a-morsetto-in-alluminio-jado,Supporto Crossbar Moto Ø12–16 mm – Staffa a Morsetto in Alluminio (JADO),"<p data-start=""500"" data-end=""671"">Il <strong data-start=""503"" data-end=""534"">Supporto Crossbar Moto JADO</strong> è una staffa professionale a morsetto pensata per un fissaggio <strong data-start=""598"" data-end=""632"">pulito, stabile e in stile OEM</strong> su moto dotate di traversino/crossbar.</p>
+<p data-start=""673"" data-end=""944"">Progettato per barre tonde <strong data-start=""700"" data-end=""713"">Ø12–16 mm</strong>, permette di montare in modo sicuro dispositivi compatibili (es. sistemi JADO / serie S) senza forare o modificare nulla: si installa in pochi minuti e mantiene il cockpit ordinato, con <strong data-start=""900"" data-end=""943"">cavi più nascosti e gestione più pulita</strong>.</p>
+<h3 data-start=""946"" data-end=""978"">✅ Caratteristiche principali</h3>
+<ul data-start=""979"" data-end=""1294"">
+<li data-start=""979"" data-end=""1028"">
+<p data-start=""981"" data-end=""1028""><strong data-start=""981"" data-end=""1015"">Compatibile crossbar Ø12–16 mm</strong> (tubi tondi)</p>
+</li>
+<li data-start=""1029"" data-end=""1082"">
+<p data-start=""1031"" data-end=""1082""><strong data-start=""1031"" data-end=""1045"">Materiale:</strong> lega di alluminio ad alta resistenza</p>
+</li>
+<li data-start=""1083"" data-end=""1135"">
+<p data-start=""1085"" data-end=""1135""><strong data-start=""1085"" data-end=""1099"">Fissaggio:</strong> morsetto clamp-on, montaggio rapido</p>
+</li>
+<li data-start=""1136"" data-end=""1191"">
+<p data-start=""1138"" data-end=""1191""><strong data-start=""1138"" data-end=""1171"">Installazione senza modifiche</strong> (no fori, no tagli)</p>
+</li>
+<li data-start=""1192"" data-end=""1238"">
+<p data-start=""1194"" data-end=""1238""><strong data-start=""1194"" data-end=""1216"">Maggiore stabilità</strong> su asfalto e sterrato</p>
+</li>
+<li data-start=""1239"" data-end=""1294"">
+<p data-start=""1241"" data-end=""1294""><strong data-start=""1241"" data-end=""1266"">Look factory / pulito</strong> per un cockpit più ordinato</p>
+</li>
+</ul>
+<h3 data-start=""1296"" data-end=""1314"">✅ Perfetto per</h3>
+<p data-start=""1315"" data-end=""1506"">Moto <strong data-start=""1320"" data-end=""1353"">Adventure, touring e sportive</strong> con traversino crossbar (Ø12–16 mm), ideale per chi vuole una soluzione <strong data-start=""1426"" data-end=""1448"">robusta e minimale</strong> per fissare un supporto in posizione alta e ben visibile.</p>
+<p data-start=""1508"" data-end=""1572"">📦 <strong data-start=""1511"" data-end=""1529"">Compatibilità:</strong> solo su moto con crossbar tondo Ø12–16 mm.</p>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"",true,Title,Default Title,,,,,,,,B2,0.0,shopify,deny,manual,24.00,,true,true,,,,,"",https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-crossbar-moto-o12-16-mm-staffa-a-morsetto-in-alluminio-jado-1755344.png?v=1769320749,1,Supporto Crossbar Moto Ø12–16 mm – Staffa a Morsetto in Alluminio (JADO) - ENDURRAD,false,Supporto Crossbar Moto Ø12–16 mm | Staffa a Morsetto in Alluminio JADO,"Supporto crossbar moto Ø12–16 mm in alluminio: morsetto stabile, montaggio rapido senza modifiche. Look OEM, ideale per ADV e touring.",8227,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,black,,,,,,,,,,,,new,alluminio,,,aftermarket,,,,,,,,,,,,,,,,,,,,,,kg,,,active
+jado-quick-release-kit-universale-per-jado-s6-staffa-sgancio-rapido-con-alimentazione-per-moto-e-scooter,"JADO Quick Release Kit Universale per JADO S6 – Staffa Sgancio Rapido con Alimentazione, per Moto e Scooter","<p>Il <strong>JADO Quick Release Kit per JADO S6</strong> è la soluzione ideale per chi vuole installare il display della serie S6 su <strong>qualsiasi moto o scooter</strong> e rimuoverlo in un attimo. Grazie alla <strong>staffa universale a sgancio rapido</strong>, puoi fissare il supporto in modo stabile e sicuro, ma allo stesso tempo <strong>estrarre il display JADO S6 con un semplice click</strong>, senza attrezzi e senza perdite di tempo.</p>
+<p>Questo sistema è pensato per l’uso quotidiano: sali in sella, agganci il dispositivo in pochi secondi, e quando parcheggi lo sfili rapidamente per proteggerlo da furti, pioggia o urti. La struttura del bracket è progettata per garantire <strong>robusta ritenzione</strong> durante la guida, mantenendo il display ben fermo anche su strade dissestate, e offrendo al tempo stesso <strong>flessibilità d’uso</strong> per chi cambia mezzo o alterna più veicoli.</p>
+<p>Il vero vantaggio arriva quando possiedi più moto: installando il <strong>Quick Release Kit su più mezzi</strong>, potrai <strong>spostare il tuo JADO S6</strong> da una moto all’altra in pochi secondi, evitando di acquistare dispositivi aggiuntivi. È la scelta perfetta per chi ha uno scooter per la città e una moto per i viaggi, oppure per chi utilizza mezzi diversi in base alla stagione.</p>
+<ul>
+<li>
+<strong>Montaggio e rimozione rapidi</strong> per massima praticità</li>
+<li>
+<strong>Operazione tool-free</strong>: aggancio/sblocco in pochi secondi</li>
+<li>
+<strong>Supporta l’alimentazione</strong> (modulo con power supply)</li>
+<li>
+<strong>Compatibilità universale</strong> con modelli moto e scooter</li>
+</ul>
+<p>Con il <strong>JADO Universal Quick-Release Bracket</strong> ottieni una guida più comoda, un’installazione pulita e la libertà di portare sempre con te il tuo display S6.</p>",JADO,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,Nuovi Arrivi,true,Title,Default Title,,,,,,,,TYKC,0.0,shopify,deny,manual,92.00,,true,true,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-quick-release-kit-universale-per-jado-s6-staffa-sgancio-rapido-con-alimentazione-per-moto-e-scooter-3967756.png?v=1770125896,1,"JADO Quick Release Kit Universale per JADO S6 – Staffa Sgancio Rapido con Alimentazione, per Moto e Scooter - ENDURRAD",false,JADO Quick Release Kit per JADO S6 | Staffa Universale Sgancio Rapido Moto,Installa JADO S6 su qualsiasi moto o scooter e rimuovi il display con un click. Staffa universale quick-release tool-free con supporto alimentazione: sposta JADO S6 tra più moto senza comprare altri dispositivi.,5613,,,,,,,,,,,,,,,Il JADO Quick Release Kit è compatibile con tutte le moto e scooter?,Posso rimuovere il display JADO S6 rapidamente quando parcheggio?,"Se ho più moto, posso usare un solo JADO S6 su tutte?",Il supporto è stabile anche su strade sconnesse o durante i viaggi?,Il kit supporta l’alimentazione del dispositivo?,,IP67,,,,,,,,1,"<h3>Specifiche Tecniche</h3>
+
+<div style=""overflow-x:auto;"">
+  <table style=""width:100%; border-collapse:collapse;"">
+    <tbody>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5; width:35%;"">Prodotto</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">JADO Quick Release Kit (Staffa Universale a Sgancio Rapido)</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Compatibilità</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Display JADO S6 Series</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Veicoli compatibili</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Universale per moto e scooter</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Tipologia supporto</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Universal Quick-Release Bracket</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Sistema di sgancio</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Sgancio rapido con rimozione display in 1 click</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Operatività</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Tool-free (installazione/rimozione in pochi secondi)</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Fissaggio</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Stabile e sicuro, progettato per robusta ritenzione durante la guida</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Alimentazione</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Supportata (modulo con power supply)</td>
+      </tr>
+      <tr>
+        <th style=""text-align:left; padding:12px; border:1px solid #e5e5e5;"">Utilizzo consigliato</th>
+        <td style=""padding:12px; border:1px solid #e5e5e5;"">Uso quotidiano + possibilità di trasferire JADO S6 su più moto</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+",,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,,,,,,,,,,,,,,,,,monitor-moto-carplay-android-auto-dashcam-jado-s6; sensori-tpms-moto-bluetooth-jado-controllo-pressione-ip67; modulo-quick-release-dedicato-per-jado-s6-compatibile-con-bmw-predisposizione-originale; supporto-moto-cannotto-sterzo-a-espansione-12-30mm-per-sportive-alluminio-anti-vibrazione; telecomando-bluetooth-da-manubrio-per-jado-s6-s1,,,"jado quick release kit
+supporto sgancio rapido jado s6
+staffa universale jado s6 moto
+supporto jado s6 universale scooter
+quick release bracket jado s6
+supporto removibile display jado s6
+staffa sgancio rapido display moto
+supporto jado s6 con alimentazione
+supporto universale navigatore moto jado
+kit montaggio rapido jado s6",,,kg,,47.00,active
+jado-quick-release-kit-universale-per-jado-s6-staffa-sgancio-rapido-con-alimentazione-per-moto-e-scooter,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/jado-quick-release-kit-universale-per-jado-s6-staffa-sgancio-rapido-con-alimentazione-per-moto-e-scooter-1198081.png?v=1770125895,2,"JADO Quick Release Kit Universale per JADO S6 – Staffa Sgancio Rapido con Alimentazione, per Moto e Scooter - ENDURRAD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
