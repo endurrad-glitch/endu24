@@ -55,33 +55,24 @@ export function GlobalSearchBar({ products, isOpen, menuIsOpen, onOpenChange }: 
 
   return (
     <div className="relative">
-      <form onSubmit={onSubmit} role="search" className="hidden md:block">
-        <Input
-          value={query}
-          onChange={(event) => {
-            setQuery(event.target.value)
-            onOpenChange(Boolean(event.target.value.trim()))
-            setCursor(-1)
-          }}
-          onFocus={() => query.trim() && onOpenChange(true)}
-          placeholder="Cerca casco, giacca, accessorio..."
-          aria-label="Cerca prodotti"
-        />
-      </form>
-
-      <Button type="button" variant="outline" className="w-full justify-start md:hidden" onClick={() => onOpenChange(true)}>
-        Cerca casco, giacca, accessorio...
+      <Button
+        type="button"
+        variant="outline"
+        className="h-11 w-full justify-start rounded-full border-slate-300 px-4 text-slate-500"
+        onClick={() => onOpenChange(true)}
+      >
+        Cerca prodotti, marchi e categorie...
       </Button>
 
       {isOpen && query.trim() && <SearchDropdown query={query} items={results} cursor={cursor} onHover={setCursor} onClose={() => onOpenChange(false)} />}
 
       <Dialog open={isOpen}>
-        <section className="fixed inset-0 z-[91] overflow-y-auto bg-slate-50 p-4 md:hidden">
+        <section className="fixed inset-0 z-[91] overflow-y-auto bg-white p-4 md:hidden">
           <div className="mb-3 flex items-center gap-2">
             <form onSubmit={onSubmit} className="flex-1">
-              <Input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Cerca prodotti..." />
+              <Input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Cerca prodotti..." className="h-12 rounded-full px-4" />
             </form>
-            <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>Chiudi</Button>
+            <Button type="button" variant="outline" className="h-11 rounded-full" onClick={() => onOpenChange(false)}>Chiudi</Button>
           </div>
           {query.trim() ? (
             <SearchDropdown query={query} items={results} cursor={cursor} onHover={setCursor} onClose={() => onOpenChange(false)} mode="mobile" />
