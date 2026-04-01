@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises'
+import { createReadStream } from 'node:fs'
 import path from 'node:path'
 import { cache } from 'react'
+import csv from 'csv-parser'
 
 export type Offer = {
   shop: string
@@ -73,11 +75,75 @@ async function loadCatalog(): Promise<CatalogPayload> {
   return JSON.parse(raw) as CatalogPayload
 }
 
+async function parseCsvProductsFallback(): Promise<Product[]> {
+  const dataDir = path.join(process.cwd(), 'data')
+  const filenames = (await fs.readdir(dataDir))
+    .filter((name) => name.toLowerCase().startsWith('products_export') && name.toLowerCase().endsWith('.csv'))
+
+  const rows = await Promise.all(
+    filenames.map((filename) => new Promise<Record<string, string>[]>((resolve, reject) => {
+      const items: Record<string, string>[] = []
+      createReadStream(path.join(dataDir, filename))
+        .pipe(csv())
+        .on('data', (row) => items.push(row))
+        .on('end', () => resolve(items))
+        .on('error', reject)
+    })),
+  )
+
+  const products = rows.flatMap((rowSet) => rowSet.map((row) => {
+    const slug = String(row.Handle || row.slug || '').trim()
+    const title = String(row.Title || row.name || '').trim()
+    const price = Number.parseFloat(String(row['Variant Price'] || row.price || '').replace(',', '.'))
+    if (!slug || !title || !Number.isFinite(price) || price <= 0) return null
+
+    const image = String(row['Image Src'] || row.image || '/file.svg')
+    const externalUrl = String(row['Variant URL'] || row.URL || '').trim() || `https://endurrad.com/products/${slug}`
+    return ensureProduct({
+      slug,
+      title,
+      brand: String(row.Vendor || 'ENDU24'),
+      category: String(row.Type || row['Product Category'] || 'Accessori Moto'),
+      description: String(row['Body (HTML)'] || ''),
+      shortDescription: String(row['SEO Description'] || title),
+      price,
+      compareAtPrice: null,
+      rating: 4.3,
+      reviews: 0,
+      availability: row.Status === 'active' ? 'Disponibile' : 'Non disponibile',
+      image,
+      images: [image],
+      tags: [],
+      specs: {},
+      offers: [{
+        shop: 'Endurrad',
+        price,
+        shipping: price > 200 ? 'Gratuita' : '€6,99',
+        availability: row.Status === 'active' ? 'In stock' : 'Out of stock',
+        url: externalUrl,
+      }],
+      externalUrl,
+      related: [],
+    })
+  }))
+
+  const bySlug = new Map<string, Product>()
+  for (const product of products) {
+    if (!product) continue
+    if (!bySlug.has(product.slug)) bySlug.set(product.slug, product)
+  }
+  return [...bySlug.values()]
+}
+
 async function parseProductsInternal(): Promise<Product[]> {
-  const catalog = await loadCatalog()
-  return (catalog.products || [])
+  const catalog = await loadCatalog().catch(() => ({ products: [] }))
+  const parsed = (catalog.products || [])
     .filter((product) => product.slug && product.title && product.price > 0)
     .map(ensureProduct)
+
+  if (parsed.length > 0) return parsed
+  const fallbackProducts = await parseCsvProductsFallback()
+  return fallbackProducts
 }
 
 export const getProducts = cache(parseProductsInternal)

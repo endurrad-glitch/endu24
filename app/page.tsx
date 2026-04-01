@@ -20,15 +20,17 @@ export default async function HomePage() {
       const bScore = (b.rating * 40) + (b.reviews * 0.15) + (b.offers.length * 12) - (bPrice * 0.02)
       return bScore - aScore
     })
-    .slice(0, 8)
+    .slice(0, 10)
 
   const featuredDeals = [...products]
     .filter((p) => p.compareAtPrice && p.compareAtPrice > p.price)
-    .slice(0, 8)
+    .slice(0, 10)
 
   const popularFromCategories = rootCategories
-    .flatMap((category) => filterProductsByCategorySlug(products, category.slug, flatCategories, categoryTree).slice(0, 1))
-    .slice(0, 6)
+    .flatMap((category) => filterProductsByCategorySlug(products, category.slug, flatCategories, categoryTree).slice(0, 2))
+    .slice(0, 10)
+
+  console.log('Homepage products loaded:', products.length)
 
   return (
     <main className="mx-auto grid w-full max-w-6xl gap-4 px-4 py-4">

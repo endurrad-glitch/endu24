@@ -25,11 +25,11 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
-    document.body.style.overflow = isSearchOpen || isMenuOpen ? 'hidden' : ''
+    document.body.style.overflow = isMenuOpen ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
     }
-  }, [isMenuOpen, isSearchOpen])
+  }, [isMenuOpen])
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
