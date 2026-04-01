@@ -92,6 +92,51 @@ export function getCategoryBySlug(slug: string, flatCategories: FlatCategory[]) 
   return flatCategories.find((category) => category.slug === slug)
 }
 
+function normalizeCategoryKey(value: string | undefined | null) {
+  return (value || '')
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
+
+function resolveProductCategoryIds(product: Product, flatCategories: FlatCategory[]): Set<number> {
+  const directById = new Map(flatCategories.map((category) => [category.id, category]))
+  const directBySlug = new Map(flatCategories.map((category) => [category.slug, category]))
+  const normalizedBySlug = new Map(flatCategories.map((category) => [normalizeCategoryKey(category.slug), category]))
+
+  const resolvedIds = new Set<number>()
+  if (product.categoryId && directById.has(product.categoryId)) {
+    resolvedIds.add(product.categoryId)
+  }
+
+  const productKeys = [
+    normalizeCategoryKey(product.categorySlug),
+    normalizeCategoryKey(product.category),
+    normalizeCategoryKey(product.sourceCategory),
+  ].filter(Boolean)
+
+  for (const key of productKeys) {
+    const exact = directBySlug.get(key) || normalizedBySlug.get(key)
+    if (exact) {
+      resolvedIds.add(exact.id)
+      continue
+    }
+
+    for (const category of flatCategories) {
+      const normalizedSlug = normalizeCategoryKey(category.slug)
+      const normalizedName = normalizeCategoryKey(category.name)
+      if (key === normalizedSlug || key === normalizedName || key.includes(normalizedSlug) || normalizedSlug.includes(key)) {
+        resolvedIds.add(category.id)
+      }
+    }
+  }
+
+  return resolvedIds
+}
+
 export function filterProductsByCategorySlug(
   products: Product[],
   slug: string,
@@ -102,22 +147,9 @@ export function filterProductsByCategorySlug(
   if (!category) return []
 
   const validCategoryIds = getCategoryDescendantIds(category.id, categoryTree)
-  const validSlugs = new Set(
-    flatCategories
-      .filter((entry) => validCategoryIds.has(entry.id))
-      .map((entry) => entry.slug),
-  )
 
   return products.filter((product) => {
-    if (product.categoryId && validCategoryIds.has(product.categoryId)) return true
-    if (product.categorySlug && validSlugs.has(product.categorySlug)) return true
-
-    const normalizedCategory = product.category.trim().toLowerCase()
-    const normalizedSourceCategory = (product.sourceCategory || '').trim().toLowerCase()
-
-    return [...validSlugs].some((categorySlug) => {
-      const label = categorySlug.replace(/-/g, ' ').toLowerCase()
-      return normalizedCategory.includes(label) || normalizedSourceCategory.includes(label)
-    })
+    const productCategoryIds = resolveProductCategoryIds(product, flatCategories)
+    return [...productCategoryIds].some((categoryId) => validCategoryIds.has(categoryId))
   })
 }
