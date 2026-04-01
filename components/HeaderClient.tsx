@@ -1,12 +1,11 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { GlobalSearchBar } from '@/components/search/GlobalSearchBar'
-import { CategoryMenu } from '@/components/CategoryMenu'
 import { BrandLogo } from '@/components/BrandLogo'
 import { Button } from '@/components/ui/button'
-import { Sheet } from '@/components/ui/sheet'
 import type { CategoryNode } from '@/lib/catalog'
+import { MobileMenu } from '@/components/MobileMenu'
+import { HeaderSearch } from '@/components/HeaderSearch'
 
 type SearchItem = {
   slug: string
@@ -36,8 +35,8 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
       <div className="mx-auto grid w-full max-w-6xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 px-4 py-3">
         <BrandLogo />
 
-        <GlobalSearchBar
-          products={searchIndex}
+        <HeaderSearch
+          searchIndex={searchIndex}
           isOpen={isSearchOpen}
           menuIsOpen={isMenuOpen}
           onOpenChange={(nextOpen) => {
@@ -46,14 +45,31 @@ export function HeaderClient({ searchIndex, categoryTree }: { searchIndex: Searc
           }}
         />
 
-        <Button variant="outline" size="icon" className="h-11 w-11 rounded-full" onClick={() => setIsMenuOpen(true)} aria-label="Apri menu">
+        <Button
+          variant="outline"
+          size="icon"
+          className="h-11 w-11 rounded-full"
+          onClick={() => setIsMenuOpen(true)}
+          aria-label="Apri menu"
+        >
           ☰
         </Button>
       </div>
 
-      <Sheet open={isMenuOpen} onClose={() => setIsMenuOpen(false)} title="Categorie">
-        <CategoryMenu categories={categoryTree} onNavigate={() => setIsMenuOpen(false)} />
-      </Sheet>
+      <div className="border-t border-slate-200 bg-white px-4 py-2 md:hidden">
+        <HeaderSearch
+          mobile
+          searchIndex={searchIndex}
+          isOpen={isSearchOpen}
+          menuIsOpen={isMenuOpen}
+          onOpenChange={(nextOpen) => {
+            setIsSearchOpen(nextOpen)
+            if (nextOpen) setIsMenuOpen(false)
+          }}
+        />
+      </div>
+
+      <MobileMenu open={isMenuOpen} onClose={() => setIsMenuOpen(false)} categories={categoryTree} />
     </header>
   )
 }
