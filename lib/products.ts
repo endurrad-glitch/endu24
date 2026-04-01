@@ -16,6 +16,7 @@ export type Product = {
   brand: string
   category: string
   categorySlug?: string
+  categoryId?: number
   sourceCategory?: string
   description: string
   shortDescription: string

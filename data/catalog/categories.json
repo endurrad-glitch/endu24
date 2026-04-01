@@ -1,0 +1,24 @@
+[
+  { "id": 28, "name": "Caschi", "slug": "caschi", "parent_id": null, "level": 0 },
+  { "id": 29, "name": "Abbigliamento", "slug": "abbigliamento", "parent_id": null, "level": 0 },
+  { "id": 30, "name": "Accessori", "slug": "accessori", "parent_id": null, "level": 0 },
+
+  { "id": 31, "name": "Integrali", "slug": "integrali", "parent_id": 28, "level": 1 },
+  { "id": 32, "name": "Modulari", "slug": "modulari", "parent_id": 28, "level": 1 },
+  { "id": 33, "name": "Cross", "slug": "cross", "parent_id": 28, "level": 1 },
+
+  { "id": 36, "name": "Giacche", "slug": "giacche", "parent_id": 29, "level": 1 },
+  { "id": 37, "name": "Guanti", "slug": "guanti", "parent_id": 29, "level": 1 },
+  { "id": 38, "name": "Pantaloni", "slug": "pantaloni", "parent_id": 29, "level": 1 },
+
+  { "id": 42, "name": "Valigie e Borse", "slug": "valigie-borse", "parent_id": 30, "level": 1 },
+  { "id": 43, "name": "Elettronica", "slug": "elettronica", "parent_id": 30, "level": 1 },
+  { "id": 44, "name": "Supporti", "slug": "supporti", "parent_id": 30, "level": 1 },
+
+  { "id": 45, "name": "Giacche Invernali", "slug": "giacche-invernali", "parent_id": 36, "level": 2 },
+  { "id": 46, "name": "Giacche Estive", "slug": "giacche-estive", "parent_id": 36, "level": 2 },
+  { "id": 47, "name": "Borse Serbatoio", "slug": "borse-serbatoio", "parent_id": 42, "level": 2 },
+  { "id": 48, "name": "Top Case", "slug": "top-case", "parent_id": 42, "level": 2 },
+  { "id": 49, "name": "Interfoni", "slug": "interfoni", "parent_id": 43, "level": 2 },
+  { "id": 50, "name": "TPMS", "slug": "tpms", "parent_id": 43, "level": 2 }
+]

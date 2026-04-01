@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { getProducts } from '@/lib/products'
 import { CategoryMenu } from '@/components/CategoryMenu'
+import { buildCategoryTree, getFlatCategories } from '@/lib/catalog'
 import { GlobalSearchBar } from '@/components/search/GlobalSearchBar'
-import { buildCategoryTree } from '@/lib/catalog'
 
 export default async function Header() {
-  const products = await getProducts()
+  const [products, flatCategories] = await Promise.all([getProducts(), getFlatCategories()])
+
   const searchIndex = products.slice(0, 150).map((p) => ({
     slug: p.slug,
     title: p.title,
@@ -18,7 +19,7 @@ export default async function Header() {
     shops: p.offers.length,
   }))
 
-  const categoryTree = buildCategoryTree(products)
+  const categoryTree = buildCategoryTree(flatCategories)
 
   return (
     <header className="site-header">

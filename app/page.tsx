@@ -3,11 +3,13 @@ import { CategoryGrid } from '@/components/home/CategoryGrid'
 import { OffersSlider } from '@/components/home/OffersSlider'
 import { TrustSection } from '@/components/home/TrustSection'
 import { ProductCard } from '@/components/ProductCard'
+import { buildCategoryTree, getFlatCategories } from '@/lib/catalog'
 import { getProducts } from '@/lib/products'
 
 export default async function HomePage() {
-  const products = await getProducts()
-  const categories = Array.from(new Set(products.map((p) => p.category))).slice(0, 6)
+  const [products, flatCategories] = await Promise.all([getProducts(), getFlatCategories()])
+  const categories = buildCategoryTree(flatCategories).filter((category) => category.level === 0).slice(0, 6)
+
   const trending = [...products]
     .sort((a, b) => {
       const aPrice = a.offers[0]?.price ?? a.price
