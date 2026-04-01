@@ -33,7 +33,7 @@ export function FilterSidebar({
   onChange: (value: FilterState) => void
   onReset: () => void
 }) {
-  const [openState, setOpenState] = useState<Record<string, boolean>>({
+  const [openState, setOpenState] = useState<Record<keyof FilterState, boolean>>({
     brand: true,
     category: true,
     priceRange: false,
@@ -42,10 +42,14 @@ export function FilterSidebar({
     features: false,
   })
 
-  const toggle = (group: keyof FilterState, entry: string) => {
+  const toggleFilter = (group: keyof FilterState, entry: string) => {
     const exists = value[group].includes(entry)
     const next = exists ? value[group].filter((item) => item !== entry) : [...value[group], entry]
     onChange({ ...value, [group]: next })
+  }
+
+  const toggleGroup = (group: keyof FilterState) => {
+    setOpenState((prev) => ({ ...prev, [group]: !prev[group] }))
   }
 
   return (
@@ -55,50 +59,49 @@ export function FilterSidebar({
         <button type="button" onClick={onReset}>Reset filtri</button>
       </div>
 
-      <FilterGroup title="Brand" open>
+      <FilterGroup title="Brand" open={openState.brand} onToggle={() => toggleGroup('brand')}>
         {options.brands.map((brand) => (
-          <FilterCheck key={brand} label={brand} checked={value.brand.includes(brand)} onChange={() => toggle('brand', brand)} />
+          <FilterCheck key={brand} label={brand} checked={value.brand.includes(brand)} onChange={() => toggleFilter('brand', brand)} />
         ))}
       </FilterGroup>
 
-      <FilterGroup title="Categoria" open>
+      <FilterGroup title="Categoria" open={openState.category} onToggle={() => toggleGroup('category')}>
         {options.categories.map((category) => (
-          <FilterCheck key={category} label={category} checked={value.category.includes(category)} onChange={() => toggle('category', category)} />
+          <FilterCheck key={category} label={category} checked={value.category.includes(category)} onChange={() => toggleFilter('category', category)} />
         ))}
       </FilterGroup>
 
-      <FilterGroup title="Fascia prezzo" open={openState.priceRange} onToggle={() => setOpenState((prev) => ({ ...prev, priceRange: !prev.priceRange }))}>
+      <FilterGroup title="Fascia prezzo" open={openState.priceRange} onToggle={() => toggleGroup('priceRange')}>
         {priceRanges.map((range) => (
-          <FilterCheck key={range} label={range === '500+' ? 'Oltre €500' : `€${range.replace('-', ' - €')}`} checked={value.priceRange.includes(range)} onChange={() => toggle('priceRange', range)} />
+          <FilterCheck key={range} label={range === '500+' ? 'Oltre €500' : `€${range.replace('-', ' - €')}`} checked={value.priceRange.includes(range)} onChange={() => toggleFilter('priceRange', range)} />
         ))}
       </FilterGroup>
 
-      <FilterGroup title="Valutazione" open={openState.rating} onToggle={() => setOpenState((prev) => ({ ...prev, rating: !prev.rating }))}>
+      <FilterGroup title="Valutazione" open={openState.rating} onToggle={() => toggleGroup('rating')}>
         {ratingOptions.map((rating) => (
-          <FilterCheck key={rating} label={`${rating} stelle`} checked={value.rating.includes(rating)} onChange={() => toggle('rating', rating)} />
+          <FilterCheck key={rating} label={`${rating} stelle`} checked={value.rating.includes(rating)} onChange={() => toggleFilter('rating', rating)} />
         ))}
       </FilterGroup>
 
-      <FilterGroup title="Disponibilità" open={openState.availability} onToggle={() => setOpenState((prev) => ({ ...prev, availability: !prev.availability }))}>
+      <FilterGroup title="Disponibilità" open={openState.availability} onToggle={() => toggleGroup('availability')}>
         {options.availability.map((item) => (
-          <FilterCheck key={item} label={item} checked={value.availability.includes(item)} onChange={() => toggle('availability', item)} />
+          <FilterCheck key={item} label={item} checked={value.availability.includes(item)} onChange={() => toggleFilter('availability', item)} />
         ))}
       </FilterGroup>
 
-      <FilterGroup title="Caratteristiche tecniche" open={openState.features} onToggle={() => setOpenState((prev) => ({ ...prev, features: !prev.features }))}>
+      <FilterGroup title="Caratteristiche tecniche" open={openState.features} onToggle={() => toggleGroup('features')}>
         {options.features.map((feature) => (
-          <FilterCheck key={feature} label={feature} checked={value.features.includes(feature)} onChange={() => toggle('features', feature)} />
+          <FilterCheck key={feature} label={feature} checked={value.features.includes(feature)} onChange={() => toggleFilter('features', feature)} />
         ))}
       </FilterGroup>
     </aside>
   )
 }
 
-function FilterGroup({ title, children, open, onToggle }: { title: string; children: ReactNode; open: boolean; onToggle?: () => void }) {
-  const alwaysOpen = !onToggle
+function FilterGroup({ title, children, open, onToggle }: { title: string; children: ReactNode; open: boolean; onToggle: () => void }) {
   return (
     <section className={`filter-group ${open ? 'open' : ''}`}>
-      <button type="button" className="filter-group-trigger" onClick={onToggle} disabled={alwaysOpen}>
+      <button type="button" className="filter-group-trigger" onClick={onToggle}>
         <span>{title}</span>
         <span className={`filter-group-arrow ${open ? 'open' : ''}`} aria-hidden>⌃</span>
       </button>

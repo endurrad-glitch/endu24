@@ -24,7 +24,7 @@ export default async function HomePage() {
 
   return (
     <main className="container page-stack">
-      <HeroSection />
+      <HeroSection imageUrl={trending[0]?.image} />
       <CategoryGrid categories={categories} />
       <section>
         <h2>Prodotti trend</h2>
