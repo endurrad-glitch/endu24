@@ -1,10 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
 import { GlobalSearchBar } from '@/components/search/GlobalSearchBar'
 import { CategoryMenu } from '@/components/CategoryMenu'
+import { BrandLogo } from '@/components/BrandLogo'
 import type { CategoryNode } from '@/lib/catalog'
 
 type SearchItem = {
@@ -49,9 +48,7 @@ export function HeaderClient({
     <header className="site-header" ref={headerRef}>
       <div className="container header-grid">
         <div className="header-top-row">
-          <Link href="/" className="brand" aria-label="Endu24 home">
-            <Image src="/logo-endu24.svg" alt="Endu24" width={132} height={34} priority className="brand-logo-image" />
-          </Link>
+          <BrandLogo />
 
           <div className="header-mobile-actions">
             <button
