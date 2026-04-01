@@ -18,9 +18,10 @@ const initialFilters: FilterState = {
 }
 
 export function ProductResultsExplorer({ products }: { products: Product[] }) {
-  const [view, setView] = useState<'list' | 'grid'>('list')
+  const [view, setView] = useState<'list' | 'grid'>('grid')
   const [sortMode, setSortMode] = useState<SortMode>('priceAsc')
   const [filters, setFilters] = useState<FilterState>(initialFilters)
+  const [isFiltersOpen, setIsFiltersOpen] = useState(false)
 
   const filterOptions: FilterOptionGroups = useMemo(() => {
     const featureSet = new Set<string>()
@@ -81,11 +82,14 @@ export function ProductResultsExplorer({ products }: { products: Product[] }) {
 
   return (
     <section className="plp-layout">
-      <FilterSidebar options={filterOptions} value={filters} onChange={setFilters} onReset={() => setFilters(initialFilters)} />
+      <div className="plp-sidebar-desktop">
+        <FilterSidebar options={filterOptions} value={filters} onChange={setFilters} onReset={() => setFilters(initialFilters)} />
+      </div>
       <div className="plp-results">
         <div className="plp-results-topbar">
           <p><strong>{filteredProducts.length}</strong> risultati aggiornati in tempo reale</p>
           <div className="plp-toolbar-actions">
+            <button type="button" className="secondary-btn mobile-filters-btn" onClick={() => setIsFiltersOpen(true)}>Filtri</button>
             <SortSelect value={sortMode} onChange={setSortMode} />
             <ViewToggle view={view} onChange={setView} />
           </div>
@@ -101,6 +105,19 @@ export function ProductResultsExplorer({ products }: { products: Product[] }) {
           {filteredProducts.map((product) => view === 'grid'
             ? <ProductCard key={product.slug} product={product} />
             : <ProductListItem key={product.slug} product={product} />)}
+        </div>
+      </div>
+
+      <div className={`filters-drawer ${isFiltersOpen ? 'open' : ''}`}>
+        <div className="filters-drawer-panel">
+          <FilterSidebar
+            options={filterOptions}
+            value={filters}
+            onChange={setFilters}
+            onReset={() => setFilters(initialFilters)}
+            mode="mobile"
+            onApply={() => setIsFiltersOpen(false)}
+          />
         </div>
       </div>
     </section>

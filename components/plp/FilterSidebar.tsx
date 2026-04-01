@@ -27,11 +27,15 @@ export function FilterSidebar({
   value,
   onChange,
   onReset,
+  mode = 'desktop',
+  onApply,
 }: {
   options: FilterOptionGroups
   value: FilterState
   onChange: (value: FilterState) => void
   onReset: () => void
+  mode?: 'desktop' | 'mobile'
+  onApply?: () => void
 }) {
   const [openState, setOpenState] = useState<Record<keyof FilterState, boolean>>({
     brand: true,
@@ -53,10 +57,10 @@ export function FilterSidebar({
   }
 
   return (
-    <aside className="filter-sidebar">
+    <aside className={`filter-sidebar ${mode === 'mobile' ? 'mobile' : ''}`}>
       <div className="filter-sidebar-header">
         <h3>Filtri</h3>
-        <button type="button" onClick={onReset}>Reset filtri</button>
+        <button type="button" onClick={onReset}>Reset</button>
       </div>
 
       <FilterGroup title="Brand" open={openState.brand} onToggle={() => toggleGroup('brand')}>
@@ -94,6 +98,13 @@ export function FilterSidebar({
           <FilterCheck key={feature} label={feature} checked={value.features.includes(feature)} onChange={() => toggleFilter('features', feature)} />
         ))}
       </FilterGroup>
+
+      {mode === 'mobile' && (
+        <div className="filter-mobile-actions">
+          <button type="button" className="secondary-btn" onClick={onReset}>Reset</button>
+          <button type="button" className="primary-btn" onClick={onApply}>Applica filtri</button>
+        </div>
+      )}
     </aside>
   )
 }
