@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { ProductCard } from '@/components/ProductCard'
 import { FilterSidebar, type FilterOptionGroups, type FilterState } from '@/components/plp/FilterSidebar'
 import { ProductListItem } from '@/components/plp/ProductListItem'
+import { SortSelect, type SortMode } from '@/components/plp/SortSelect'
 import { ViewToggle } from '@/components/plp/ViewToggle'
 import type { Product } from '@/lib/products'
 
@@ -18,6 +19,7 @@ const initialFilters: FilterState = {
 
 export function ProductResultsExplorer({ products }: { products: Product[] }) {
   const [view, setView] = useState<'list' | 'grid'>('list')
+  const [sortMode, setSortMode] = useState<SortMode>('priceAsc')
   const [filters, setFilters] = useState<FilterState>(initialFilters)
 
   const filterOptions: FilterOptionGroups = useMemo(() => {
@@ -35,7 +37,7 @@ export function ProductResultsExplorer({ products }: { products: Product[] }) {
   }, [products])
 
   const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
+    const narrowed = products.filter((product) => {
       const matchBrand = !filters.brand.length || filters.brand.includes(product.brand)
       const matchCategory = !filters.category.length || filters.category.includes(product.category)
       const matchAvailability = !filters.availability.length || filters.availability.includes(product.availability)
@@ -57,7 +59,20 @@ export function ProductResultsExplorer({ products }: { products: Product[] }) {
 
       return matchBrand && matchCategory && matchAvailability && matchRating && matchPrice && matchFeatures
     })
-  }, [products, filters])
+
+    return narrowed.sort((a, b) => {
+      const priceA = a.offers[0]?.price ?? a.price
+      const priceB = b.offers[0]?.price ?? b.price
+      const savingsA = (a.compareAtPrice || priceA) - priceA
+      const savingsB = (b.compareAtPrice || priceB) - priceB
+
+      if (sortMode === 'priceAsc') return priceA - priceB
+      if (sortMode === 'priceDesc') return priceB - priceA
+      if (sortMode === 'popularity') return b.reviews - a.reviews || b.rating - a.rating
+      if (sortMode === 'savings') return savingsB - savingsA
+      return b.slug.localeCompare(a.slug)
+    })
+  }, [products, filters, sortMode])
 
   const activeChips = useMemo(
     () => Object.values(filters).flat(),
@@ -70,7 +85,10 @@ export function ProductResultsExplorer({ products }: { products: Product[] }) {
       <div className="plp-results">
         <div className="plp-results-topbar">
           <p><strong>{filteredProducts.length}</strong> risultati aggiornati in tempo reale</p>
-          <ViewToggle view={view} onChange={setView} />
+          <div className="plp-toolbar-actions">
+            <SortSelect value={sortMode} onChange={setSortMode} />
+            <ViewToggle view={view} onChange={setView} />
+          </div>
         </div>
 
         {activeChips.length > 0 && (
