@@ -26,7 +26,7 @@ export default async function PublicHomePage() {
       <section className="grid gap-4 md:grid-cols-2">
         {topProducts.slice(0, 2).map((product) => (
           <article key={product.slug} className="relative h-56 overflow-hidden rounded-2xl">
-            <Image src={product.image} alt={product.title} fill className="object-cover" />
+            <Image src={product.image} alt={product.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/70 p-5 text-white">
               <h3 className="text-xl font-semibold">{product.title}</h3>
               <Link href={`/prodotto/${product.slug}`} className="mt-3 inline-flex w-fit rounded-full bg-white px-4 py-2 text-sm font-semibold text-[#2b2b2b]">

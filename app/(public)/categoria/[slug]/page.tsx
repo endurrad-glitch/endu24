@@ -69,7 +69,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               <Link
                 key={n}
                 href={`/categoria/${slug}?sort=${sort}&page=${n}`}
-                className={`rounded-full px-3 py-1 text-sm ${n === currentPage ? 'bg-[#ff580d] text-[#2b2b2b]' : 'bg-white ring-1 ring-[#2b2b2b]/10 text-[#2b2b2b]'}`}
+                className={`rounded-full px-3 py-1 text-sm ${n === currentPage ? 'bg-[#ff580d] text-white' : 'bg-white ring-1 ring-[#2b2b2b]/10 text-[#2b2b2b]'}`}
               >
                 {n}
               </Link>
