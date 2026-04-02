@@ -27,7 +27,7 @@ export function FiltersSidebar() {
           <button
             key={sort.value}
             onClick={() => updateSort(sort.value)}
-            className="w-full rounded-lg border border-[#2b2b2b]/10 px-3 py-2 text-left text-sm hover:bg-white"
+            className="w-full rounded-lg border border-[#2b2b2b]/10 px-3 py-2 text-left text-sm text-[#2b2b2b] hover:bg-white"
           >
             {sort.label}
           </button>
