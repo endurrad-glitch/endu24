@@ -1,92 +1,115 @@
-# endu24.com – Next.js + Supabase CMS leggero
+# endu24 SaaS Core (Next.js 15 + Supabase)
 
-Applicazione Next.js (App Router) con dashboard admin per gestire header pubblico (logo, branding, menu) tramite Supabase.
+Production-ready SaaS foundation for **endu24.com**, rebuilt with:
 
-## Stack
-
-- Next.js 16 (App Router)
-- TypeScript
+- Next.js 15 (App Router)
+- TypeScript (strict)
 - Tailwind CSS
-- Supabase Auth + Database + Storage
-- Server Actions per mutazioni lato admin
+- Supabase (Auth, Postgres, Storage)
+- RLS policies
 
-## Struttura cartelle principale
+## Project structure
 
 ```txt
 app/
+  (public)/
+    layout.tsx
+    page.tsx
   admin/
-    (protected)/
-      layout.tsx
-      page.tsx
-      logo/page.tsx
-      menu/page.tsx
-    login/
-      LoginForm.tsx
-      page.tsx
-    actions/auth.ts
-    logo/actions.ts
-    menu/actions.ts
+    layout.tsx
+    page.tsx
+    logo/page.tsx
+    menu/page.tsx
+  login/page.tsx
+  api/logout/route.ts
   layout.tsx
-  page.tsx
+  globals.css
+
+actions/
+  auth.ts
+  settings.ts
+  menu.ts
+
 components/
   admin/
-    LogoManager.tsx
-    MenuManager.tsx
-  navbar/
-    Navbar.tsx
-    MobileMenu.tsx
+    login-form.tsx
+    logo-settings-form.tsx
+    menu-manager.tsx
+  layout/
+    public-header.tsx
+    admin-shell.tsx
+  ui/
+    button.tsx
+    card.tsx
+    input.tsx
+
 lib/
+  auth/session.ts
   cms.ts
   supabase/
     client.ts
     server.ts
+  utils/cn.ts
+
+types/
+  database.ts
+
 db/
   supabase-cms.sql
+middleware.ts
 ```
 
-## Setup Supabase
+## Environment variables
 
-1. Crea un progetto su Supabase.
-2. Esegui lo script SQL in `db/supabase-cms.sql` nel SQL Editor.
-3. In Authentication > Users crea almeno un utente admin (email/password).
-4. Configura `.env.local` partendo da `.env.example`:
+Create `.env.local`:
 
 ```bash
-cp .env.example .env.local
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SUPABASE_SERVICE_ROLE_KEY=
 ```
 
-## Funzionalità implementate
+> `SUPABASE_SERVICE_ROLE_KEY` is reserved for future privileged backend operations and is not required for current admin actions.
 
-- **Auth admin** con email/password Supabase
-- **Protezione route `/admin/*`** via layout server-side con redirect automatico a `/admin/login`
-- **Logout** con invalidazione sessione
-- **Dashboard admin** con sidebar + header
-- **Gestione logo/branding** su `/admin/logo`
-  - upload su Supabase Storage bucket `site-assets`
-  - preview live
-  - salvataggio `settings.logo_url` + `settings.site_name`
-- **Gestione menu** su `/admin/menu`
-  - CRUD menu items
-  - toggle attivo/non attivo
-  - ordinamento tramite campo numerico `order`
-- **Header pubblico dinamico** (`components/navbar/Navbar.tsx`) che legge logo e menu da Supabase (SSR)
+## Supabase setup
 
-## Deploy su Vercel
+1. Create a Supabase project.
+2. Enable Email/Password in Authentication providers.
+3. Run SQL from `db/supabase-cms.sql` in the SQL editor.
+4. Create at least one admin user in Supabase Auth (email/password).
 
-1. Push repository su GitHub.
-2. Importa il progetto in Vercel.
-3. Aggiungi Environment Variables:
-   - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-4. Deploy.
-5. Esegui SQL `db/supabase-cms.sql` sul progetto Supabase di produzione.
-6. Crea utente admin in Supabase Auth per accedere a `/admin/login`.
-
-## Comandi utili
+## Local development
 
 ```bash
 npm install
 npm run dev
-npm run lint
-npm run build
 ```
+
+Open:
+
+- Public site: `http://localhost:3000`
+- Login: `http://localhost:3000/login`
+- Admin: `http://localhost:3000/admin`
+
+## CMS scope implemented
+
+- **Branding** (`/admin/logo`)
+  - update site name
+  - upload logo to Supabase Storage (`site-assets`)
+  - preview + persisted logo URL
+
+- **Menu management** (`/admin/menu`)
+  - create menu items
+  - toggle active/inactive
+  - delete entries
+  - sort by `sort_order`
+
+- **Public rendering**
+  - header renders logo + site name + active menu items from Supabase
+
+## Deployment (Vercel)
+
+1. Import repository in Vercel.
+2. Add environment variables from `.env.local`.
+3. Deploy.
+4. Ensure Supabase URL domain is allowed in `next.config.ts` image remote patterns.
