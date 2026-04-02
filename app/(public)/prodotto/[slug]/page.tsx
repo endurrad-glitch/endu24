@@ -37,12 +37,12 @@ export default async function ProductPage({ params }: Props) {
       <section className="grid gap-8 lg:grid-cols-2">
         <div className="space-y-3">
           <div className="relative h-[420px] overflow-hidden rounded-2xl bg-white">
-            <Image src={product.image} alt={product.title} fill className="object-cover" />
+            <Image src={product.image} alt={product.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
           </div>
           <div className="grid grid-cols-4 gap-2">
             {product.images.slice(0, 4).map((image) => (
               <div key={image} className="relative h-24 overflow-hidden rounded-lg bg-white">
-                <Image src={image} alt={product.title} fill className="object-cover" />
+                <Image src={image} alt={product.title} fill className="object-cover" sizes="(max-width: 768px) 25vw, 12vw" />
               </div>
             ))}
           </div>

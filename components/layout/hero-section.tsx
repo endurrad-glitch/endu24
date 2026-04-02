@@ -16,7 +16,7 @@ export function HeroSection({ product }: { product: CatalogProduct }) {
         </Link>
       </div>
       <div className="relative h-64 overflow-hidden rounded-2xl bg-[#2b2b2b]/10 lg:h-80">
-        <Image src={product.image} alt={product.title} fill className="object-cover" priority />
+        <Image src={product.image} alt={product.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" priority />
       </div>
     </section>
   )

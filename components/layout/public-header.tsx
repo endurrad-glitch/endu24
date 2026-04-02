@@ -21,7 +21,7 @@ export async function PublicHeader() {
         <div className="mr-[107px] flex-1 max-w-none"><SearchBar /></div>
 
         <div className="ml-auto hidden items-center md:flex" aria-label="Azioni utente">
-          <button className="bg-[#ff580d] text-[#2b2b2b] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#e14e0c] transition">Accedi</button>
+          <button className="bg-[#ff580d] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#e14e0c] transition text-white">Accedi</button>
         </div>
       </div>
 
