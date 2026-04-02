@@ -44,13 +44,13 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
   return (
     <div className="space-y-6">
-      <nav className="text-sm text-slate-600">
+      <nav className="text-sm text-[#2b2b2b]/70">
         <Link href="/">Home</Link> / <span>{category.name}</span>
       </nav>
 
       <header>
         <h1 className="text-3xl font-bold">{category.name}</h1>
-        <p className="mt-2 max-w-3xl text-slate-600">
+        <p className="mt-2 max-w-3xl text-[#2b2b2b]/70">
           Esplora il catalogo {category.name} con confronti prezzo aggiornati, disponibilità e recensioni reali.
         </p>
       </header>
@@ -58,7 +58,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
         <FiltersSidebar />
         <section>
-          <p className="text-sm text-slate-600">{total} prodotti in categoria</p>
+          <p className="text-sm text-[#2b2b2b]/70">{total} prodotti in categoria</p>
           <div className="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
             {products.map((product) => (
               <ProductCard key={product.slug} product={product} />
@@ -69,7 +69,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               <Link
                 key={n}
                 href={`/categoria/${slug}?sort=${sort}&page=${n}`}
-                className={`rounded-full px-3 py-1 text-sm ${n === currentPage ? 'bg-slate-900 text-white' : 'bg-white ring-1 ring-slate-200'}`}
+                className={`rounded-full px-3 py-1 text-sm ${n === currentPage ? 'bg-[#ff580d] text-white' : 'bg-white ring-1 ring-[#2b2b2b]/10'}`}
               >
                 {n}
               </Link>

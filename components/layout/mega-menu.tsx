@@ -54,15 +54,15 @@ export function MegaMenu({ items }: { items: MenuItem[] }) {
   const tree = buildTree(items)
 
   return (
-    <nav className="border-y border-slate-200 bg-white">
+    <nav className="border-y border-[#2b2b2b]/10 bg-white">
       <div className="mx-auto flex w-full max-w-7xl items-center gap-6 overflow-x-auto px-4 py-3">
         {tree.map((root) => (
           <div key={root.id} className="group relative shrink-0">
-            <Link href={root.url} className="text-sm font-medium text-slate-700 hover:text-slate-900">
+            <Link href={root.url} className="text-sm font-medium text-[#2b2b2b] hover:text-[#2b2b2b]">
               {root.label}
             </Link>
             {root.children.length > 0 ? (
-              <div className="invisible absolute left-0 top-full z-40 mt-3 grid min-w-[560px] grid-cols-3 gap-4 rounded-2xl border border-slate-200 bg-white p-5 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">
+              <div className="invisible absolute left-0 top-full z-40 mt-3 grid min-w-[560px] grid-cols-3 gap-4 rounded-2xl border border-[#2b2b2b]/10 bg-white p-5 opacity-0 shadow-xl transition group-hover:visible group-hover:opacity-100">
                 {root.children.map((child) => (
                   <div key={child.id}>
                     <Link className="font-medium hover:underline" href={child.url}>
@@ -72,7 +72,7 @@ export function MegaMenu({ items }: { items: MenuItem[] }) {
                       <ul className="mt-2 space-y-2">
                         {child.children.map((sub) => (
                           <li key={sub.id}>
-                            <Link className="text-sm text-slate-600 hover:text-slate-900" href={sub.url}>
+                            <Link className="text-sm text-[#2b2b2b]/70 hover:text-[#2b2b2b]" href={sub.url}>
                               {sub.label}
                             </Link>
                           </li>

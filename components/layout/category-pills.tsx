@@ -10,7 +10,7 @@ export function CategoryPills({ categories }: { categories: CatalogCategory[] })
           <Link
             key={category.slug}
             href={`/categoria/${category.slug}`}
-            className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm hover:border-slate-500"
+            className="rounded-full border border-[#2b2b2b]/10 bg-white px-4 py-2 text-sm hover:border-[#2b2b2b]/30"
           >
             {category.name}
           </Link>
