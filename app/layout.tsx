@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from '@/components/Header'
+import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="it">
       <body>
-        <Header />
+        <Navbar />
         {children}
         <Footer />
       </body>
