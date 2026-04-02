@@ -1,8 +1,8 @@
-# endu24 SaaS Core (Next.js 15 + Supabase)
+# endu24 SaaS Core (Next.js 16 + Supabase)
 
 Production-ready SaaS foundation for **endu24.com**, rebuilt with:
 
-- Next.js 15 (App Router)
+- Next.js 16 (App Router)
 - TypeScript (strict)
 - Tailwind CSS
 - Supabase (Auth, Postgres, Storage)
@@ -56,7 +56,7 @@ types/
 
 db/
   supabase-cms.sql
-middleware.ts
+proxy.ts
 ```
 
 ## Environment variables
