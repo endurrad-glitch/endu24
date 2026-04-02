@@ -1,17 +1,28 @@
 import { redirect } from 'next/navigation'
 import { createServerSupabaseClient } from '@/lib/supabase/server'
 
-export async function getSessionUser() {
-  const supabase = await createServerSupabaseClient()
-  const {
-    data: { user }
-  } = await supabase.auth.getUser()
+export async function getUser() {
+  try {
+    const supabase = await createServerSupabaseClient()
+    const {
+      data: { user },
+      error
+    } = await supabase.auth.getUser()
 
-  return user
+    if (error) {
+      console.error('Supabase getUser error:', error.message)
+      return null
+    }
+
+    return user
+  } catch (error) {
+    console.error('Failed to create server Supabase client:', error)
+    return null
+  }
 }
 
-export async function requireUser() {
-  const user = await getSessionUser()
+export async function requireAuth() {
+  const user = await getUser()
 
   if (!user) {
     redirect('/login')
