@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { Input } from '@/components/ui/input'
 
@@ -9,6 +10,7 @@ type SearchHit = {
   slug: string
   title: string
   price?: number
+  image?: string
 }
 
 type CategoryHit = {
@@ -47,9 +49,16 @@ export function SearchBar() {
     router.push(`/ricerca?q=${encodeURIComponent(q)}`)
   }
 
+  function clearSearch() {
+    setQuery('')
+    setProducts([])
+    setCategories([])
+    setOpen(false)
+  }
+
   return (
-    <div className="relative w-full max-w-2xl">
-      <form onSubmit={submitSearch}>
+    <div className="relative w-full flex-1 max-w-none">
+      <form onSubmit={submitSearch} className="relative">
         <Input
           value={query}
           onChange={(e) => {
@@ -62,9 +71,19 @@ export function SearchBar() {
           }}
           onFocus={() => setOpen(true)}
           placeholder="Cerca prodotti, marche o categorie"
-          className="h-11 rounded-full border-[#2b2b2b]/10 bg-white px-5"
+          className="h-11 rounded-full border-[#2b2b2b]/10 bg-white px-5 pr-10"
           aria-label="Cerca nel catalogo"
         />
+        {query.length > 0 ? (
+          <button
+            type="button"
+            onClick={clearSearch}
+            className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-[#2b2b2b] hover:text-[#2b2b2b]"
+            aria-label="Pulisci ricerca"
+          >
+            ✕
+          </button>
+        ) : null}
       </form>
 
       {open && shouldSearch ? (
@@ -78,11 +97,18 @@ export function SearchBar() {
                 <ul className="space-y-2">
                   {products.map((item) => (
                     <li key={item.slug}>
-                      <Link className="text-sm hover:underline" href={`/prodotto/${item.slug}`} onClick={() => setOpen(false)}>
-                        {item.title}
-                        {typeof item.price === 'number' ? (
-                          <span className="ml-2 text-xs text-[#2b2b2b]/70">€{item.price.toFixed(2)}</span>
-                        ) : null}
+                      <Link className="block hover:underline" href={`/prodotto/${item.slug}`} onClick={() => setOpen(false)}>
+                        <div className="flex items-center gap-3">
+                          {item.image ? (
+                            <Image src={item.image} alt={item.title} width={48} height={48} className="h-12 w-12 rounded-md object-cover" />
+                          ) : null}
+                          <div>
+                            <p className="text-sm">{item.title}</p>
+                            {typeof item.price === 'number' ? (
+                              <span className="text-xs text-[#2b2b2b]/70">€{item.price.toFixed(2)}</span>
+                            ) : null}
+                          </div>
+                        </div>
                       </Link>
                     </li>
                   ))}
