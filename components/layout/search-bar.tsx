@@ -62,26 +62,26 @@ export function SearchBar() {
           }}
           onFocus={() => setOpen(true)}
           placeholder="Cerca prodotti, marche o categorie"
-          className="h-11 rounded-full border-slate-300 bg-slate-50 px-5"
+          className="h-11 rounded-full border-[#2b2b2b]/10 bg-white px-5"
           aria-label="Cerca nel catalogo"
         />
       </form>
 
       {open && shouldSearch ? (
-        <div className="absolute z-50 mt-2 w-full rounded-2xl border border-slate-200 bg-white p-4 shadow-lg">
+        <div className="absolute z-50 mt-2 w-full rounded-2xl border border-[#2b2b2b]/10 bg-white p-4 shadow-lg">
           {products.length === 0 && categories.length === 0 ? (
-            <p className="text-sm text-slate-500">Nessun risultato trovato.</p>
+            <p className="text-sm text-[#2b2b2b]/70">Nessun risultato trovato.</p>
           ) : (
             <div className="grid gap-4 md:grid-cols-2">
               <div>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Prodotti</p>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[#2b2b2b]/70">Prodotti</p>
                 <ul className="space-y-2">
                   {products.map((item) => (
                     <li key={item.slug}>
                       <Link className="text-sm hover:underline" href={`/prodotto/${item.slug}`} onClick={() => setOpen(false)}>
                         {item.title}
                         {typeof item.price === 'number' ? (
-                          <span className="ml-2 text-xs text-slate-500">€{item.price.toFixed(2)}</span>
+                          <span className="ml-2 text-xs text-[#2b2b2b]/70">€{item.price.toFixed(2)}</span>
                         ) : null}
                       </Link>
                     </li>
@@ -90,7 +90,7 @@ export function SearchBar() {
               </div>
 
               <div>
-                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Categorie</p>
+                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-[#2b2b2b]/70">Categorie</p>
                 <ul className="space-y-2">
                   {categories.map((item) => (
                     <li key={item.slug}>

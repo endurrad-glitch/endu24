@@ -30,7 +30,7 @@ export default async function SearchResultsPage({
       <FiltersSidebar />
       <section>
         <h1 className="text-2xl font-semibold">Risultati per “{q || 'tutto il catalogo'}”</h1>
-        <p className="mt-1 text-sm text-slate-600">{total} prodotti trovati</p>
+        <p className="mt-1 text-sm text-[#2b2b2b]/70">{total} prodotti trovati</p>
 
         <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
           {products.map((product) => (
@@ -43,7 +43,7 @@ export default async function SearchResultsPage({
             <Link
               key={n}
               href={`/ricerca?q=${encodeURIComponent(q)}&sort=${sort}&page=${n}`}
-              className={`rounded-full px-3 py-1 text-sm ${n === currentPage ? 'bg-slate-900 text-white' : 'bg-white ring-1 ring-slate-200'}`}
+              className={`rounded-full px-3 py-1 text-sm ${n === currentPage ? 'bg-[#ff580d] text-white' : 'bg-white ring-1 ring-[#2b2b2b]/10'}`}
             >
               {n}
             </Link>
