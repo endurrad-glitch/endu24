@@ -1,0 +1,273 @@
+Handle,Title,Body (HTML),Vendor,Product Category,Type,Tags,Published,Option1 Name,Option1 Value,Option1 Linked To,Option2 Name,Option2 Value,Option2 Linked To,Option3 Name,Option3 Value,Option3 Linked To,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Unit Price Total Measure,Unit Price Total Measure Unit,Unit Price Base Measure,Unit Price Base Measure Unit,Variant Barcode,Image Src,Image Position,Image Alt Text,Gift Card,SEO Title,SEO Description,Google Shopping / Google Product Category,Google Shopping / Gender,Google Shopping / Age Group,Google Shopping / MPN,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Aggiornato seo (product.metafields.custom.aggiornato_seo),Descr Img Prod (product.metafields.custom.descr_img_prod),DIMENSIONI (L.H.P.) (product.metafields.custom.dimensioni_l_h_p),Faqs Prodotto (product.metafields.custom.faqs_prodotto),Faq D1 (product.metafields.custom.faq_d),Faq D2 (product.metafields.custom.faq_d2),Faq D3 (product.metafields.custom.faq_d3),Faq D4 (product.metafields.custom.faq_d4),Faq D5 (product.metafields.custom.faq_d5),Flusso luminoso totale (product.metafields.custom.flusso_luminoso_totale),Waterproof (product.metafields.custom.impermeabilit_),Marca Moto (product.metafields.custom.make_list),Materiale (product.metafields.custom.materiale),MetaSeoProd (product.metafields.custom.metaseoprod),Modalità funzionamento (product.metafields.custom.modalit_funzionamento),Peso (product.metafields.custom.peso),Potenza (product.metafields.custom.potenza),Product icons (product.metafields.custom.product_icons),Quantità (product.metafields.custom.quantit_),TabellaProdotto (product.metafields.custom.tabellaprodotto),Temperatura Colore (product.metafields.custom.temperatura_colore),Volume Lt. (product.metafields.custom.volume_lt_),Year from (product.metafields.custom.year_from),Year to (product.metafields.custom.year_to),Youtube Link (product.metafields.custom.youtube_link),Numero di valutazioni del prodotto (product.metafields.reviews.rating_count),Dimensioni dell'accessorio (product.metafields.shopify.accessory-size),Età (product.metafields.shopify.age-group),Funzionalità della borsa/custodia (product.metafields.shopify.bag-case-features),Materiale borsa/custodia (product.metafields.shopify.bag-case-material),Funzionalità di conservazione della borsa/custodia (product.metafields.shopify.bag-case-storage-features),Tipo di borsa (product.metafields.shopify.bag-type),Opzioni di trasporto (product.metafields.shopify.carry-options),Tipo di caricabatterie (product.metafields.shopify.charger-type),Color (product.metafields.shopify.color-pattern),Funzionalità del dispositivo di comunicazione (product.metafields.shopify.communication-device-features),Tipo di connessione (product.metafields.shopify.connection-type),Tecnologia di connettività (product.metafields.shopify.connectivity-technology),Funzionalità della copertina (product.metafields.shopify.cover-features),Materiale del rivestimento (product.metafields.shopify.cover-material),Tipo di copertura (product.metafields.shopify.cover-type),Tessuto (product.metafields.shopify.fabric),Funzionalità (product.metafields.shopify.features),Tipo di vestibilità (product.metafields.shopify.fit-type),Tipo di indicatore (product.metafields.shopify.gauge-type),Materiale per la manifattura (product.metafields.shopify.handwear-material),Condizione dell’articolo (product.metafields.shopify.item-condition),Materiale dell'articolo (product.metafields.shopify.item-material),Sorgente luminosa (product.metafields.shopify.light-source),Funzionalità di illuminazione (product.metafields.shopify.lighting-features),Tipo di produttore (product.metafields.shopify.manufacturer-type),Materiale (product.metafields.shopify.material),Funzionalità di montaggio/supporto (product.metafields.shopify.mount-stand-features),Funzionalità specializzate del lettore/registratore (product.metafields.shopify.player-recorder-specialized-features),Fonte di alimentazione (product.metafields.shopify.power-source),Funzionalità dell'equipaggiamento protettivo (product.metafields.shopify.protective-gear-features),Materiale dell'attrezzatura di sicurezza (product.metafields.shopify.safety-equipment-material),Genere di destinazione (product.metafields.shopify.target-gender),Area di applicazione del veicolo (product.metafields.shopify.vehicle-application-area),Funzionalità di guida/gestione del veicolo (product.metafields.shopify.vehicle-drive-handling-features),Funzionalità del veicolo (product.metafields.shopify.vehicle-features),Funzionalità del telaio/carrozzeria del veicolo (product.metafields.shopify.vehicle-frame-body-features),Design dello specchietto del veicolo (product.metafields.shopify.vehicle-mirror-design),Funzionalità dello specchietto del veicolo (product.metafields.shopify.vehicle-mirror-features),Tipo di specchietto per veicolo (product.metafields.shopify.vehicle-mirror-type),Tipo di veicolo (product.metafields.shopify.vehicle-type),Prodotti complementari (product.metafields.shopify--discovery--product_recommendation.complementary_products),Prodotti correlati (product.metafields.shopify--discovery--product_recommendation.related_products),Impostazioni dei prodotti correlati (product.metafields.shopify--discovery--product_recommendation.related_products_display),Boost dei prodotti per la ricerca (product.metafields.shopify--discovery--product_search_boost.queries),Highlighted Product (product.metafields.theme.highlight),Variant Image,Variant Weight Unit,Variant Tax Code,Cost per item,Included / Italia,Price / Italia,Compare At Price / Italia,Included / Austria,Price / Austria,Compare At Price / Austria,Included / Belgio,Price / Belgio,Compare At Price / Belgio,Included / Bulgaria,Price / Bulgaria,Compare At Price / Bulgaria,Included / Cechia,Price / Cechia,Compare At Price / Cechia,Included / Cipro,Price / Cipro,Compare At Price / Cipro,Included / Croazia,Price / Croazia,Compare At Price / Croazia,Included / Danimarca,Price / Danimarca,Compare At Price / Danimarca,Included / Estonia,Price / Estonia,Compare At Price / Estonia,Included / Finlandia,Price / Finlandia,Compare At Price / Finlandia,Included / Francia,Price / Francia,Compare At Price / Francia,Included / Gemania,Price / Gemania,Compare At Price / Gemania,Included / Grecia,Price / Grecia,Compare At Price / Grecia,Included / Irlanda,Price / Irlanda,Compare At Price / Irlanda,Included / Lettonia,Price / Lettonia,Compare At Price / Lettonia,Included / Lituania,Price / Lituania,Compare At Price / Lituania,Included / Lussemburgo,Price / Lussemburgo,Compare At Price / Lussemburgo,Included / Malta,Price / Malta,Compare At Price / Malta,Included / Paesi Bassi,Price / Paesi Bassi,Compare At Price / Paesi Bassi,Included / Polonia,Price / Polonia,Compare At Price / Polonia,Included / Portogallo,Price / Portogallo,Compare At Price / Portogallo,Included / Romania,Price / Romania,Compare At Price / Romania,Included / Slovacchia,Price / Slovacchia,Compare At Price / Slovacchia,Included / Slovenia,Price / Slovenia,Compare At Price / Slovenia,Included / Spagna,Price / Spagna,Compare At Price / Spagna,Included / Svezia,Price / Svezia,Compare At Price / Svezia,Included / Ungheria,Price / Ungheria,Compare At Price / Ungheria,Status
+supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115,Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115),"<h2>Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115) | Montaggio Rapido, Alluminio 6061, Compatibile Ø22–32 mm</h2>
+<div class=""product-description"">
+<h3>🔩 <strong>Il modo più pulito per avere il Remote a portata di dito</strong>
+</h3>
+<p>Il Supporto Manubrio per Telecomando CHIGEE MFP0089 è l’accessorio dedicato per montare il <strong>telecomando CHIGEE MFP0089</strong> direttamente sul manubrio, con un’installazione semplice e una presa solida anche su fondi sconnessi.</p>
+<ul>
+<li>
+<strong>Compatibilità manubri</strong> Ø <strong>22–32 mm</strong> (secondo variante/anello)</li>
+<li>
+<strong>Alluminio 6061</strong> per leggerezza e rigidità</li>
+<li>
+<strong>Profilo compatto</strong> e posizione a portata di pollice</li>
+<li>
+<strong>Montaggio plug &amp; play</strong> con anello/clamp dedicato</li>
+<li>
+<strong>Fissaggio stabile</strong> anti-vibrazioni</li>
+</ul>
+<hr>
+<h3>⚙️ <strong>Materiali e dettagli costruttivi</strong>
+</h3>
+<p>Corpo in <strong>lega di alluminio 6061</strong>, dimensioni ottimizzate per occupare poco spazio sul manubrio e offrire una superficie d’appoggio precisa per il Remote <strong>MFP0089</strong>.</p>
+<ul>
+<li>✅ <strong>Alluminio 6061</strong> (resistente e leggero)</li>
+<li>✅ <strong>Dimensioni compatte</strong> per affollamenti cockpit</li>
+<li>✅ <strong>Interfaccia dedicata</strong> al telecomando MFP0089</li>
+</ul>
+<h2 style=""font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;"">I 5 Perché del Supporto Manubrio MFP0115</h2>
+<ol style=""padding-left: 1.2rem; line-height: 1.6; margin: 0;"">
+<li>
+<strong>Perché esiste?</strong><br>Per <em>posizionare il telecomando</em> CHIGEE MFP0089 in modo ergonomico, sicuro e sempre raggiungibile.</li>
+<li>
+<strong>Perché sceglierlo?</strong><br><em>Alluminio 6061</em>, <em>clamp dedicato</em> per i diametri più comuni e <em>ingombro ridotto</em>.</li>
+<li>
+<strong>Perché è affidabile?</strong><br>Materiale <em>heavy-duty</em> e blocco <em>anti-vibrazioni</em> anche su sterrati.</li>
+<li>
+<strong>Perché il prezzo è giustificato?</strong><br>Migliora <em>controllo e sicurezza</em> sfruttando al massimo il Remote senza soluzioni improvvisate.</li>
+<li>
+<strong>Perché migliora la vita del rider?</strong><br>Comandi <em>a portata di pollice</em>, cockpit ordinato, montaggio in pochi minuti.</li>
+</ol>
+<hr>
+<h3>🛠️ <strong>Installazione</strong>
+</h3>
+<p>Apri il <strong>clamp</strong>, posiziona il supporto nella zona più comoda del manubrio (senza interferire con cavi/comandi), serra le viti usando <strong>frenafiletti medio</strong>. Fissa il <strong>MFP0089</strong> alla piastrina del supporto e verifica la libertà di sterzo a fine corsa. Dopo 100–200 km ricontrolla i serraggi.</p>
+<hr>
+<h3>🏍️ <strong>Ideale per</strong>
+</h3>
+<ul>
+<li>CHIGEE AIO-5 / AIO-6 con telecomando <strong>MFP0089</strong>
+</li>
+<li>Turismo, commuting e ADV</li>
+<li>Installazioni pulite con comandi a portata di mano</li>
+</ul>
+</div>
+<table class=""product-specs"" style=""width: 100%; border-collapse: collapse;"">
+<thead>
+<tr style=""background-color: #707070; color: #fff;"">
+<th style=""border: 1px solid #ccc; padding: 8px; text-align: left;"">Caratteristica</th>
+<th style=""border: 1px solid #ccc; padding: 8px; text-align: left;"">Dettaglio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Applicazione</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Montaggio del <strong>telecomando CHIGEE MFP0089</strong> su manubrio</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Compatibilità diametri</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">
+<strong>Ø 22 / 25–28,6 / 32 mm</strong> (secondo variante/anello)</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Materiale</td>
+<td style=""border: 1px solid #ccc; padding: 8px;""><strong>Lega di alluminio 6061</strong></td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Dimensioni</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">
+<strong>≈ 89,4 × 37,5 × 19,2 mm</strong> (indicative)</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Codice/SKU</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">
+<strong>MFP0115</strong> (supporto manubrio dedicato)</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Dotazione</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">
+<strong>Supporto manubrio</strong> MFP0115; anello/clamp secondo variante. <em>Telecomando MFP0089 non incluso</em>
+</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Note</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Verifica il <strong>diametro</strong> del tuo manubrio e scegli la variante corretta; posiziona lontano da parti in movimento/cavi.</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ccc; padding: 8px;"">Servizio</td>
+<td style=""border: 1px solid #ccc; padding: 8px;"">
+<strong>Spedizione gratuita</strong> da €100 (Italia) / €250 (UE) • <strong>Reso 15 giorni</strong>
+</td>
+</tr>
+</tbody>
+</table>
+<h3><strong><br>FAQ</strong></h3>
+<table style=""width: 100%; border-collapse: collapse; margin-top: 20px;"">
+<thead>
+<tr style=""background-color: #707070; color: #fff;"">
+<th style=""border: 1px solid #ddd; padding: 12px; text-align: left; font-weight: bold;"">Domanda</th>
+<th style=""border: 1px solid #ddd; padding: 12px; text-align: left; font-weight: bold;"">Risposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=""border: 1px solid #ddd; padding: 12px;"">È compatibile con tutti i manubri?</td>
+<td style=""border: 1px solid #ddd; padding: 12px;"">Con i diametri più comuni <strong>Ø 22 / 25–28,6 / 32 mm</strong>. Scegli la versione corretta per il tuo manubrio.</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ddd; padding: 12px;"">Serve forare o modificare qualcosa?</td>
+<td style=""border: 1px solid #ddd; padding: 12px;"">
+<strong>No</strong>, il montaggio è <strong>plug &amp; play</strong> con il clamp in dotazione.</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ddd; padding: 12px;"">Il telecomando MFP0089 è incluso?</td>
+<td style=""border: 1px solid #ddd; padding: 12px;"">
+<strong>No</strong>, è venduto separatamente. Questo articolo è il <strong>supporto manubrio</strong> dedicato.</td>
+</tr>
+<tr>
+<td style=""border: 1px solid #ddd; padding: 12px;"">È resistente a pioggia e vibrazioni?</td>
+<td style=""border: 1px solid #ddd; padding: 12px;"">
+<strong>Sì</strong>, l’alluminio 6061 e il fissaggio clamp assicurano stabilità anche su fondi sconnessi.</td>
+</tr>
+</tbody>
+</table>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Ergonomia,"STAFFA CONTROLLER, SUPPORTO CONTROLLER",true,Title,Default Title,,,,,,,,MFP0115,0.0,shopify,deny,manual,13.95,,true,true,1.0,item,1,item,6977387770144,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115-9730377.png?v=1758349695,1,Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115) - ENDURRAD,false,Supporto Manubrio per Telecomando CHIGEE MFP0089,"Supporto Manubrio per Telecomando CHIGEE MFP0089 Montaggio rapido a clamp su manubri Ø22–32 mm, profilo compatto e fissaggio stabile.",919,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,,,,,,,,,black,,,,,,,,,,,,new,,,,aftermarket; di-terze-parti,,,,,,,,,,,,,,,,,,,"supporto manubrio telecomando Chigee
+supporto manubrio MFP0089
+mount manubrio telecomando Chigee
+staffa manubrio MFP0115
+supporto manubrio remoto Chigee
+supporto manubrio Chigee MFP0115
+supporto manubrio remoto moto
+supporto telecomando manubrio Chigee
+supporto manubrio Chigee MFP0089
+staffa manubrio remoto universale",,,kg,,7.10,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115-5375411.png?v=1758349697,2,Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115) - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115-9224569.png?v=1758349694,3,Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115) - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115-6588820.png?v=1758349695,4,Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115) - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/supporto-manubrio-per-telecomando-chigee-mfp0089-mfp0115-1816141.png?v=1758349697,5,Supporto Manubrio per Telecomando CHIGEE MFP0089 (MFP0115) - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cappucci-valvole-con-sensori-di-pressione-chigee,Cappucci valvole con Sensori di pressione Chigee,"<p>Scopri i Cappucci valvole con Sensori di pressione Chigee per il monitoraggio in tempo reale degli pneumatici. Facili da installare, realizzati in lega di alluminio di alta qualità e con batteria a lunga durata, offrono una visualizzazione simultanea di pressione e temperatura per una guida sicura.</p>
+<p><strong>Compatibili con i modelli :</strong></p>
+<ul>
+<li>AIO-5 Lite</li>
+<li>AIO-5 Play</li>
+<li>AIO-5 Play BMW Edition</li>
+<li>XR-2</li>
+</ul>
+<p> </p>
+<p><iframe height=""315"" width=""560"" src=""https://www.youtube.com/embed/6tzqnQ0N2WU?si=b4Q6knB3YTmajYdo"" title=""YouTube video player""></iframe></p>
+<p><img alt="""" src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Descrizione_Cappucci_valvole_chigee_1.webp?v=1731403520""></p>
+<p><img alt="""" src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Descrizione_Cappucci_valvole_chigee_2.webp?v=1731403519""></p>
+<p><img alt="""" src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Descrizione_Cappucci_valvole_chigee_3.webp?v=1731403519""></p>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"Aprilia Tuareg 660, Aprilia Tuareg Rally 660, Benelli TRK 502 X, Benelli TRK 702, Benelli TRK 702 X, BMW C 400 GT, BMW CE04, BMW F 750 GS, BMW F 800 GS, BMW F 850 GS, BMW F 850 GS Adventure, BMW F 900 GS, BMW F 900 GS Adventure, BMW R 1200 GS, BMW R 1200 GS Adventure, BMW R 1250 GS, BMW R 1250 GS Adventure, BMW R 1300 GS, BMW R 1300 GS Adventure, CAPPUCCI VALVOLE, CFMOTO 450MT, CFMOTO 800MT, CFMOTO 800MT X, Chigee, DUCATI DesertX, DUCATI Multistrada V4 S, Harley-Davidson Pan America 1250 Special, HONDA CB 400 X, HONDA CB 500 X, HONDA CRF1100L Africa Twin, HONDA CRF1100L Africa Twin Adventure, HONDA NC 750 X, HONDA NX 400, HONDA X-ADV 750, HONDA XL 750 TRANSALP, Husqvarna Norden 901, KAWASAKI Versys 650, KOVE 510X, KOVE 800X, KTM 1290 Super Adventure, KTM 390 Adventure, KTM 790 Adventure, KTM 890 Adventure, QJMOTOR SRT 600 X, QJMOTOR SRT 700 S, QJMOTOR SRT 700 SX, QJMOTOR SRT 900 SX, QJMOTOR SVT 650 X, SUZUKI V-STROM 1050, SUZUKI V-STROM 800, TRIUMPH Tiger 1200, TRIUMPH Tiger 900, VOGE Valico 300 Rally, VOGE Valico 525 DSX, VOGE Valico 625 DSX, VOGE Valico 800 Rally, VOGE Valico 900 DSX, YAMAHA TENERE 700, YAMAHA Tracer 900 GT",true,Title,Default Title,,,,,,,,MFP0019,0.0,shopify,deny,manual,50.00,,true,true,,,,,6977387770021,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cappucci-valvole-con-sensori-di-pressione-chigee-7730418.png?v=1754634913,1,Cappucci valvole con Sensori di pressione Chigee - ENDURRAD,false,Cappucci valvole con Sensori di pressione Chigee - Sicurezza,Scopri i Cappucci valvole con Sensori di pressione Chigee per monitoraggio pneumatici. Facili da installare e realizzati in alluminio per una guida sicura.,8234,,,,new,,,,,,,,,,,,,,,,,,APRILIA,,,,,,,2,,,,,,,,,,,,,,,,black,,,,,,,,,,pressione; temperatura,,new,,,,aftermarket,,,,,,,,,,,,,,,,cgrc-can-per-aio-5-play-bmw; controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1; cover-display-aio-chigee; custodia-aio-5-play-bmw-edition,,,"cappucci valvole sensori Chigee
+tappi valvole con sensore pressione
+sensori pressione pneumatici Chigee
+cappucci TPMS Chigee
+tappi valvole Chigee con sensori
+copri valvole sensore pressione
+tappi valvole con display pressione
+valvole con sensori Chigee cappucci
+cappucci valvole per TPMS moto
+cappucci sensori pressione pneumatici",,,kg,,27.92,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+cappucci-valvole-con-sensori-di-pressione-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cappucci-valvole-con-sensori-di-pressione-chigee-2835560.png?v=1754634915,2,Cappucci valvole con Sensori di pressione Chigee - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cappucci-valvole-con-sensori-di-pressione-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cappucci-valvole-con-sensori-di-pressione-chigee-9933738.png?v=1754634916,3,Cappucci valvole con Sensori di pressione Chigee - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cappucci-valvole-con-sensori-di-pressione-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cappucci-valvole-con-sensori-di-pressione-chigee-3536844.png?v=1754634917,4,Cappucci valvole con Sensori di pressione Chigee - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cappucci-valvole-con-sensori-di-pressione-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cappucci-valvole-con-sensori-di-pressione-chigee-2833508.png?v=1754634917,5,Cappucci valvole con Sensori di pressione Chigee - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+valvole-pneumatici-moto-con-sensori-di-pressione-chigee,Valvole pneumatici moto con sensori di pressione Chigee,"<p>Monitora la pressione dei pneumatici della tua moto in tempo reale con le Valvole pneumatici moto con sensori di pressione Chigee, compatibile con display Chigee AIO-5 Play, AIO-5 Lite e AIO-5 Play BMW Edition. Con un intervallo di misurazione da 0 a 8 BAR e precisione di 0,01 BAR, questi sensori ti garantiscono massima sicurezza e controllo. Batteria a lunga durata (2-3 anni, non sostituibile) e design compatto (25x25x49,5 mm).</p>
+<div>
+<p><strong>Adatto per i seguenti modelli:</strong></p>
+<ul>
+<li>AIO-5 Lite</li>
+<li>AIO-5 Play</li>
+<li>AIO-5 Play for BMW</li>
+<li>XR-2</li>
+</ul>
+<p> </p>
+</div>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"Aprilia Tuareg 660, Aprilia Tuareg Rally 660, Benelli TRK 502 X, Benelli TRK 702, Benelli TRK 702 X, BMW C 400 GT, BMW CE04, BMW F 750 GS, BMW F 800 GS, BMW F 850 GS, BMW F 850 GS Adventure, BMW F 900 GS, BMW F 900 GS Adventure, BMW R 1200 GS, BMW R 1200 GS Adventure, BMW R 1250 GS, BMW R 1250 GS Adventure, BMW R 1300 GS, BMW R 1300 GS Adventure, CFMOTO 450MT, CFMOTO 800MT, CFMOTO 800MT X, Chigee, DUCATI DesertX, DUCATI Multistrada V4 S, Harley-Davidson Pan America 1250 Special, HONDA CB 400 X, HONDA CB 500 X, HONDA CRF1100L Africa Twin, HONDA CRF1100L Africa Twin Adventure, HONDA NC 750 X, HONDA NX 400, HONDA X-ADV 750, HONDA XL 750 TRANSALP, Husqvarna Norden 901, KAWASAKI Versys 650, KOVE 510X, KOVE 800X, KTM 1290 Super Adventure, KTM 390 Adventure, KTM 790 Adventure, KTM 890 Adventure, QJMOTOR SRT 600 X, QJMOTOR SRT 700 S, QJMOTOR SRT 700 SX, QJMOTOR SRT 900 SX, QJMOTOR SVT 650 X, SUZUKI V-STROM 1050, SUZUKI V-STROM 800, TRIUMPH Tiger 1200, TRIUMPH Tiger 900, VALVOLE PNEUMATICI, VOGE Valico 300 Rally, VOGE Valico 525 DSX, VOGE Valico 625 DSX, VOGE Valico 800 Rally, VOGE Valico 900 DSX, YAMAHA TENERE 700, YAMAHA Tracer 900 GT",true,Title,Default Title,,,,,,,,MFP0018,0.0,shopify,deny,manual,60.00,,true,true,,,,,6977387770014,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/valvole-pneumatici-moto-con-sensori-di-pressione-chigee-7368951.png?v=1754634922,1,Valvole pneumatici moto con sensori di pressione Chigee - ENDURRAD,false,,"Monitora la pressione in tempo reale con le Valvole pneumatici moto con sensori di pressione Chigee, precise e compatibili con display AIO-5.",8234,,,,new,,,,,,,,,,,,,,,,,,APRILIA,,,,,,,2,,,,,,,,,,,,,,,,black,,,,,,,,,,pressione,,new,,,,aftermarket,,,,,,,,,,,,,,,,cappucci-valvole-con-sensori-di-pressione-chigee; controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1; staffa-per-barra-aio-5-lite; custodia-aio-5-play-bmw-edition; cover-display-aio-chigee,,,"valvole pneumatici sensori Chigee
+valvole TPMS Chigee moto
+valvole con sensori pressione moto
+valvole pneumatici Chigee LED
+TPMS Chigee valvole moto
+valvole pneumatici moto sensori
+valvole Chigee per pneumatici moto
+sensori pressione valvole Chigee
+valvole pneumatici intelligenti Chigee
+valvole con sensori pressione Chigee",,,kg,,29.99,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+valvole-pneumatici-moto-con-sensori-di-pressione-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/valvole-pneumatici-moto-con-sensori-di-pressione-chigee-9123688.png?v=1754634922,2,Valvole pneumatici moto con sensori di pressione Chigee - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1,"Controller Wireless Display Chigee 2,4 GHz per Serie AIO 5","<p><meta charset=""utf-8"">Scopri il Controller Wireless Display Chigee 2,4 GHz, progettato per un’installazione semplice senza cablaggio complicato. Con una disposizione dei pulsanti pensata per l’uso senza guanti, funzionalità multifunzionali e lunga durata, è ideale per chi utilizza la serie AIO 5. Migliora la tua esperienza di guida con un controllo remoto intuitivo, sicuro e facile da usare.</p>
+<p> </p>
+<p><iframe title=""YouTube video player"" src=""https://www.youtube.com/embed/XPp7376_KYs?si=9r9xYYaV6a3JvvtM"" height=""315"" width=""560""></iframe></p>
+<p><img alt="""" src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Controller_Wireless_Display_Chigee-1.png?v=1731400406""><img alt="""" src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Controller_Wireless_Display_Chigee-2.png?v=1731400404""></p>
+<p><iframe title=""YouTube video player"" src=""https://www.youtube.com/embed/0dNO8OgxULE?si=WTGQqPRKzpcfgx_p"" height=""315"" width=""560""></iframe></p>
+<p><strong>*Nota: </strong><br><strong>1.</strong> La serie AIO-5 può collegarsi a un solo dispositivo Bluetooth alla volta. Ciò significa che non sarà possibile utilizzare contemporaneamente il CGRC CAN/LIN e il telecomando wireless MFP0089.</p>
+<p><strong>2.</strong> Non utilizzare colla a vite sul telecomando wireless Pro. La colla a vite può causare il deterioramento e la fragilità dei componenti in plastica, con conseguenti danni o malfunzionamenti del telecomando. Eventuali danni derivanti dall'uso di colla a vite non sono coperti da garanzia.</p>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"AIO 5, Aprilia Tuareg 660, Aprilia Tuareg Rally 660, Benelli TRK 502 X, Benelli TRK 702, Benelli TRK 702 X, BMW C 400 GT, BMW CE04, BMW F 750 GS, BMW F 800 GS, BMW F 850 GS, BMW F 850 GS Adventure, BMW F 900 GS, BMW F 900 GS Adventure, BMW R 1200 GS, BMW R 1200 GS Adventure, BMW R 1250 GS, BMW R 1250 GS Adventure, BMW R 1300 GS, BMW R 1300 GS Adventure, CFMOTO 450MT, CFMOTO 800MT, CFMOTO 800MT X, Chigee, CONTROLLER DISPLAY, DUCATI DesertX, DUCATI Multistrada V4 S, Harley-Davidson Pan America 1250 Special, HONDA CB 400 X, HONDA CB 500 X, HONDA CRF1100L Africa Twin, HONDA CRF1100L Africa Twin Adventure, HONDA NC 750 X, HONDA NX 400, HONDA X-ADV 750, HONDA XL 750 TRANSALP, Husqvarna Norden 901, KAWASAKI Versys 650, KOVE 510X, KOVE 800X, KTM 1290 Super Adventure, KTM 390 Adventure, KTM 790 Adventure, KTM 890 Adventure, QJMOTOR SRT 600 X, QJMOTOR SRT 700 S, QJMOTOR SRT 700 SX, QJMOTOR SRT 900 SX, QJMOTOR SVT 650 X, SUZUKI V-STROM 1050, SUZUKI V-STROM 800, TRIUMPH Tiger 1200, TRIUMPH Tiger 900, VOGE Valico 300 Rally, VOGE Valico 525 DSX, VOGE Valico 625 DSX, VOGE Valico 800 Rally, VOGE Valico 900 DSX, YAMAHA TENERE 700, YAMAHA Tracer 900 GT",true,Title,Default Title,,,,,,,,MFP0089,0.0,shopify,deny,manual,64.00,,true,true,,,,,6977387770038,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/controller-wireless-display-chigee-24-ghz-per-serie-aio-5-9637536.png?v=1754634925,1,"Controller Wireless Display Chigee 2,4 GHz per Serie AIO 5 - ENDURRAD",false,"Controller Wireless Display Chigee 2,4 GHz per AIO 5","Scopri il Controller Wireless Display Chigee: installazione semplice, pulsanti per uso senza guanti e lunga durata. Migliora la tua esperienza di guida!",8526,,,,new,,,,,,,,,,,,,,,,,IP68,APRILIA,ABS + PC,,,,,,1,,,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,aftermarket,,,,alimentato-a-batteria,,,,,,,,,,,,staffa-per-barra-aio-5-lite; valvole-pneumatici-moto-con-sensori-di-pressione-chigee; cappucci-valvole-con-sensori-di-pressione-chigee,,,"controller wireless display Chigee
+controller Chigee 2.4GHz
+display wireless Chigee AIO 5.1
+controller remoto Chigee AIO 5.1
+telecomando Chigee AIO display
+controller display moto Chigee
+Chigee AIO 5.1 wireless controller
+controller guida Chigee AIO
+telecomando 2.4GHz Chigee
+controller display smart Chigee",,,kg,,32.06,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/controller-wireless-display-chigee-24-ghz-per-serie-aio-5-9228464.png?v=1754634926,2,"Controller Wireless Display Chigee 2,4 GHz per Serie AIO 5 - ENDURRAD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/controller-wireless-display-chigee-24-ghz-per-serie-aio-5-5685660.png?v=1754634926,3,"Controller Wireless Display Chigee 2,4 GHz per Serie AIO 5 - ENDURRAD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/controller-wireless-display-chigee-24-ghz-per-serie-aio-5-5012382.png?v=1754634926,4,"Controller Wireless Display Chigee 2,4 GHz per Serie AIO 5 - ENDURRAD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/controller-wireless-display-chigee-24-ghz-per-serie-aio-5-4790362.png?v=1754634926,5,"Controller Wireless Display Chigee 2,4 GHz per Serie AIO 5 - ENDURRAD",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+custodia-aio-5-play-bmw-edition,Custodia AIO 5 Play BMW Edition,"<h2 class=""h2 product-single__title"">Custodia AIO 5 Play BMW Edition</h2>
+<p>Prenditi cura del tuo AIO 5 Play BMW Edition con la custodia progettata appositamente per proteggere il tuo display quando lo rimuovi dalla moto. Resiste a graffi e danni allo schermo, mantenendo il tuo dispositivo sicuro e funzionante. Ideale per chi è sempre in viaggio, questa custodia assicura la massima tranquillità e l'aspetto nuovo del tuo dispositivo.</p>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"AIO 5, Aprilia Tuareg 660, Aprilia Tuareg Rally 660, Benelli TRK 502 X, Benelli TRK 702, Benelli TRK 702 X, BMW C 400 GT, BMW CE04, BMW F 750 GS, BMW F 800 GS, BMW F 850 GS, BMW F 850 GS Adventure, BMW F 900 GS, BMW F 900 GS Adventure, BMW R 1200 GS, BMW R 1200 GS Adventure, BMW R 1250 GS, BMW R 1250 GS Adventure, BMW R 1300 GS, BMW R 1300 GS Adventure, CFMOTO 450MT, CFMOTO 800MT, CFMOTO 800MT X, CUSTODIA DISPLAY, DUCATI DesertX, DUCATI Multistrada V4 S, Harley-Davidson Pan America 1250 Special, HONDA CB 400 X, HONDA CB 500 X, HONDA CRF1100L Africa Twin, HONDA CRF1100L Africa Twin Adventure, HONDA NC 750 X, HONDA NX 400, HONDA X-ADV 750, HONDA XL 750 TRANSALP, Husqvarna Norden 901, KAWASAKI Versys 650, KOVE 510X, KOVE 800X, KTM 1290 Super Adventure, KTM 390 Adventure, KTM 790 Adventure, KTM 890 Adventure, QJMOTOR SRT 600 X, QJMOTOR SRT 700 S, QJMOTOR SRT 700 SX, QJMOTOR SRT 900 SX, QJMOTOR SVT 650 X, SUZUKI V-STROM 1050, SUZUKI V-STROM 800, TRIUMPH Tiger 1200, TRIUMPH Tiger 900, VOGE Valico 300 Rally, VOGE Valico 525 DSX, VOGE Valico 625 DSX, VOGE Valico 800 Rally, VOGE Valico 900 DSX, YAMAHA TENERE 700, YAMAHA Tracer 900 GT",true,Title,Default Title,,,,,,,,MFP0164,0.0,shopify,deny,manual,20.00,,true,true,,,,,6977387770564,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/custodia-aio-5-play-bmw-edition-3554762.jpg?v=1754634927,1,Custodia AIO 5 Play BMW Edition - ENDURRAD,false,,Prenditi cura del tuo AIO 5 Play BMW Edition con lCustodia AIO 5 Play BMW Edition progettata appositamente per proteggere il tuo display.,919,,,,new,,,,,,,,,,,,,,,,,,BMW,TPU,,,,,,1,,,,,,,,,,,,,,,,black,,,,,,,,,,,,,,,,,plastica; sintetico,,,,,,,,,,,,,,,cover-display-aio-chigee; cappucci-valvole-con-sensori-di-pressione-chigee; controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1,,,"custodia AIO 5 Play BMW
+cover AIO 5 Play BMW Edition
+custodia display AIO 5 BMW
+custodia protettiva AIO 5 BMW
+custodia Chigee AIO 5 BMW
+custodia display BMW Edition
+case AIO 5 Play BMW
+custodia neve AIO 5 BMW
+custodia antiurto AIO 5 BMW",,,kg,,9.70,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+custodia-aio-5-play-bmw-edition,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/custodia-aio-5-play-bmw-edition-9011455.jpg?v=1754634930,2,Custodia AIO 5 Play BMW Edition - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+custodia-aio-5-play-bmw-edition,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/custodia-aio-5-play-bmw-edition-3499153.jpg?v=1754634929,3,Custodia AIO 5 Play BMW Edition - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cgrc-can-per-aio-5-play-bmw,CGRC CAN per AIO 5 Play BMW - Endurrad,"<h2 id=""tinymce_scroll_sign"">CGRC CAN per AIO 5 Play BMW</h2>
+<p>Il CGRC CAN per AIO 5 Play BMW è compatibile con i modelli di moto BMW dotati di multi-controller, permettendo un utilizzo sicuro ed efficiente dell'AIO 5 senza dover togliere le mani dal manubrio. Grazie a questo multi-controller, potrai godere di una guida più comoda e sicura.</p>
+<p>Il CGRC CAN per AIO 5 Play BMW è l'accessorio ideale per configurare facilmente il CGRC CAN alla vostra moto. Collegando il modulo alla porta a 4 o 8 pin, potrete monitorare la pressione degli pneumatici o installare un sistema antifurto, risparmiando tempo e fatica. Acquistate i connettori a pin appropriati per la vostra moto specifica e godetevi un'installazione semplice e intuitiva.</p>
+<p data-mce-fragment=""1"">※Per i modelli 2022/2023 K1600 e 2023 1250RT, l'installazione del CGRC-CAN può causare conflitti di integrazione dei comandi con il display TFT BMW.</p>
+<p><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/p.jpg?v=1723630944"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/BMW.jpg?v=1723630945"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/4pin.jpg?v=1723630944"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/install.jpg?v=1723630944"" alt=""""></p>
+<p><img><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/8pin.jpg?v=1728045490"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/8pin-2.jpg?v=1728045491"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/CGRC_Remote_Control_CAN_For_BMW_2_1.jpg?v=1728045652"" alt=""""></p>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"BMW, CGRC AIO 5, Elettronica",true,CGRC CAN,4 PIN - GS\GSA,,,,,,,,MFP0120,0.0,shopify,deny,manual,50.00,,true,true,,,,,6977387770120,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cgrc-can-per-aio-5-play-bmw-5830245.jpg?v=1754634929,1,CGRC CAN per AIO 5 Play BMW - Endurrad - ENDURRAD,false,CGRC CAN per AIO 5 Play BMW - Controllo Avanzato,CGRC CAN per AIO 5 Play BMW Scopri il Controller Wonder wheel originale BMW 4 pin per una guida comoda e sicura con il CGRC CAN per AIO 5 Play.,8526,,,,new,,,,,,,,,,,,,,,,,,BMW,TPU,,,,,,1,,,,,,,2,,,,,,,,,black,,,,,,,,,,,,new,,,,aftermarket; di-terze-parti,,,,,,,,,,,,,,,,cover-display-aio-chigee; custodia-aio-5-play-bmw-edition; controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1; cappucci-valvole-con-sensori-di-pressione-chigee; valvole-pneumatici-moto-con-sensori-di-pressione-chigee,,,"CGRC CAN AIO 5 Play BMW
+modulo CAN per AIO 5 BMW
+CGRC CAN controllo Wonder Wheel
+interfaccia CAN BMW AIO5
+modulo CAN per display BMW
+CHIGEE CGRC CAN BMW
+modulo controllo ruota magica BMW
+CAN module AIO 5 Play BMW
+CGRC CAN 4 pin BMW
+CGRC CAN 8 pin BMW",,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cgrc-can-per-aio-5-play-bmw-5830245.jpg?v=1754634929,kg,,37.48,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+cgrc-can-per-aio-5-play-bmw,,,,,,,,,8 PIN - C\FS\R\K,,,,,,,,MFP0121,0.0,shopify,deny,manual,50.00,,true,true,,,,,6977387770113,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cgrc-can-per-aio-5-play-bmw-7482599.jpg?v=1754634930,2,CGRC CAN per AIO 5 Play BMW - Endurrad - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cgrc-can-per-aio-5-play-bmw-7482599.jpg?v=1754634930,kg,,37.48,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cgrc-can-per-aio-5-play-bmw,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cgrc-can-per-aio-5-play-bmw-2710805.jpg?v=1754634930,3,CGRC CAN per AIO 5 Play BMW - Endurrad - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+staffa-per-barra-aio-5-lite,Staffa per barra AIO 5 Lite - Endurrad,"<h2 id=""tinymce_scroll_sign"">Scopri la Staffa per barra AIO 5 Lite</h2>
+<p>La staffa per barra trasversale per AIO 5 Lite è l'accessorio ideale per installare il display della tua moto sopra al tachimetro o al display originale. Grazie al suo diametro regolabile da 12 a 16MM, garantisce un'installazione perfetta e sicura. Rendi il tuo viaggio più comodo e aggiungi un tocco di stile alla tua moto con questa staffa versatile e funzionale.</p>
+<p> </p>
+<p><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/CrossBar_Mount.png?v=1723626286"" alt=""""></p>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"Aprilia Tuareg 660, Aprilia Tuareg Rally 660, Benelli TRK 502 X, Benelli TRK 702, Benelli TRK 702 X, BMW C 400 GT, BMW CE04, BMW F 750 GS, BMW F 800 GS, BMW F 850 GS, BMW F 850 GS Adventure, BMW F 900 GS, BMW F 900 GS Adventure, BMW R 1200 GS, BMW R 1200 GS Adventure, BMW R 1250 GS, BMW R 1250 GS Adventure, BMW R 1300 GS, BMW R 1300 GS Adventure, CFMOTO 450MT, CFMOTO 800MT, CFMOTO 800MT X, DUCATI DesertX, DUCATI Multistrada V4 S, Harley-Davidson Pan America 1250 Special, HONDA CB 400 X, HONDA CB 500 X, HONDA CRF1100L Africa Twin, HONDA CRF1100L Africa Twin Adventure, HONDA NC 750 X, HONDA NX 400, HONDA X-ADV 750, HONDA XL 750 TRANSALP, Husqvarna Norden 901, KAWASAKI Versys 650, KOVE 510X, KOVE 800X, KTM 1290 Super Adventure, KTM 390 Adventure, KTM 790 Adventure, KTM 890 Adventure, QJMOTOR SRT 600 X, QJMOTOR SRT 700 S, QJMOTOR SRT 700 SX, QJMOTOR SRT 900 SX, QJMOTOR SVT 650 X, Staffa per barra AIO 5 Light, SUZUKI V-STROM 1050, SUZUKI V-STROM 800, TRIUMPH Tiger 1200, TRIUMPH Tiger 900, VOGE Valico 300 Rally, VOGE Valico 525 DSX, VOGE Valico 625 DSX, VOGE Valico 800 Rally, VOGE Valico 900 DSX, YAMAHA TENERE 700, YAMAHA Tracer 900 GT",true,Title,Default Title,,,,,,,,MFP0022,0.0,shopify,deny,manual,28.00,,true,true,,,,,6977387770106,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/staffa-per-barra-aio-5-lite-8890888.jpg?v=1754634928,1,Staffa per barra AIO 5 Lite - Endurrad - ENDURRAD,false,Staffa per barra AIO 5 Lite - Installazione Facile e Sicura,"Scopri la Staffa per barra AIO 5 Lite, ideale per posizionare il display della tua moto in modo comodo e stiloso.",8526,,,,new,,,,,,,,,,,,,,,,,,APRILIA,,,,,,,,,,,,,,,,,,,,,,,black,,,,,,,,,,,,new,,,,aftermarket,,,,manuale,,,,,,,,,,,,cover-display-aio-chigee; custodia-aio-5-play-bmw-edition; controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1; cappucci-valvole-con-sensori-di-pressione-chigee; valvole-pneumatici-moto-con-sensori-di-pressione-chigee,,,"staffa barra AIO-5 Lite
+supporto barra AIO5 Lite
+staffa display AIO5 Lite
+staffa barra trasversale AIO5
+supporto display barra AIO-5
+staffa per tubo 12-16 mm
+staffa AIO-5 Lite barra trasversale
+supporto barra regolabile AIO5
+mount barra AIO-5 Lite
+staffa barra crossbar AIO5",,,kg,,13.63,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+cover-display-aio-chigee,Cover Display AIO Chigee - Endurrad,"<h2 id=""tinymce_scroll_sign"">Cover Display AIO Chigee: Protezione Perfetta per il Tuo Dispositivo</h2>
+<p>La Cover Display AIO Chigee è progettata per proteggere il tuo schermo in modo ottimale. Questo prodotto combina materiali di alta qualità con un design elegante, offrendo una soluzione robusta e pratica per chi desidera mantenere intatti i propri dispositivi. La nostra custodia è adatta a una vasta gamma di dispositivi, garantendo una protezione eccellente contro graffi, urti e polvere.</p>
+<p>Uno dei principali vantaggi della Cover Display AIO Chigee è la sua resistenza. Il materiale utilizzato è altamente durevole, così il tuo dispositivo sarà sempre protetto, anche in condizioni difficili. Inoltre, la custodia è facile da installare e rimuovere, rendendo semplice l'accesso al dispositivo in qualsiasi momento. Non dovrai preoccuparti di complicate procedure di installazione o di danneggiare il tuo schermo durante l'applicazione della custodia.</p>
+<p>Un altro aspetto importante è il design. La Cover Display AIO Chigee non solo offre protezione, ma è anche esteticamente piacevole. Con un design sottile e moderno, questa custodia si integra perfettamente con lo stile del tuo dispositivo senza compromettere la sua estetica. Potrai quindi beneficiare di una protezione robusta senza dover sacrificare l'aspetto visivo del tuo dispositivo.</p>
+<p>La versatilità della Cover Display AIO Chigee è la scelta ideale per chiunque desideri una protezione affidabile ed elegante per i propri schermi. Non importa quale dispositivo utilizzi, la Cover Display AIO Chigee offrirà la protezione di cui hai bisogno, mantenendo il tuo schermo pulito e senza imperfezioni.</p>
+<p>Infine, l'aspetto della manutenzione è semplice e veloce. La Cover Display AIO Chigee è facile da pulire e mantenere, così potrai sempre goderti un dispositivo impeccabile. Grazie alle sue caratteristiche anti-polvere e anti-impronte digitali, il tuo schermo rimarrà chiaro e brillante come nuovo, garantendo un'esperienza d'uso ottimale. Investire nella Cover Display AIO Chigee significa proteggere il tuo dispositivo ed estenderne la vita operativa in modo significativo.</p>
+<p><br><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Custodia_in_silicone_descrizione_1.png?v=1723020588"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Custodia_in_silicone_descrizione_4.png?v=1723020587"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Custodia_in_silicone_descrizione_3.png?v=1723020587"" alt=""""><img src=""https://cdn.shopify.com/s/files/1/0604/6561/0991/files/Custodia_in_silicone_descrizione_5.png?v=1723020587"" alt=""""></p>",CHIGEE,Vehicles & Parts > Vehicle Parts & Accessories,Accessori Display Carplay,"AIO 5, Aprilia Tuareg 660, Aprilia Tuareg Rally 660, Benelli TRK 502 X, Benelli TRK 702, Benelli TRK 702 X, BMW C 400 GT, BMW CE04, BMW F 750 GS, BMW F 800 GS, BMW F 850 GS, BMW F 850 GS Adventure, BMW F 900 GS, BMW F 900 GS Adventure, BMW R 1200 GS, BMW R 1200 GS Adventure, BMW R 1250 GS, BMW R 1250 GS Adventure, BMW R 1300 GS, BMW R 1300 GS Adventure, CFMOTO 450MT, CFMOTO 800MT, CFMOTO 800MT X, CHIGEE, COVER DISPLAY, DUCATI DesertX, DUCATI Multistrada V4 S, Harley-Davidson Pan America 1250 Special, HONDA CB 400 X, HONDA CB 500 X, HONDA CRF1100L Africa Twin, HONDA CRF1100L Africa Twin Adventure, HONDA NC 750 X, HONDA NX 400, HONDA X-ADV 750, HONDA XL 750 TRANSALP, Husqvarna Norden 901, KAWASAKI Versys 650, KOVE 510X, KOVE 800X, KTM 1290 Super Adventure, KTM 390 Adventure, KTM 790 Adventure, KTM 890 Adventure, QJMOTOR SRT 600 X, QJMOTOR SRT 700 S, QJMOTOR SRT 700 SX, QJMOTOR SRT 900 SX, QJMOTOR SVT 650 X, SUZUKI V-STROM 1050, SUZUKI V-STROM 800, TRIUMPH Tiger 1200, TRIUMPH Tiger 900, VOGE Valico 300 Rally, VOGE Valico 525 DSX, VOGE Valico 625 DSX, VOGE Valico 800 Rally, VOGE Valico 900 DSX, YAMAHA TENERE 700, YAMAHA Tracer 900 GT",true,Title,Default Title,,,,,,,,MFP0130,0.0,shopify,deny,manual,18.00,,true,true,,,,,6977387770137,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cover-display-aio-chigee-2890454.jpg?v=1754634931,1,Cover Display AIO Chigee - Endurrad - ENDURRAD,false,Cover Display AIO Chigee - Protezione Ottimale per Display,Scopri la Cover Display AIO Chigee: la soluzione perfetta per proteggere il tuo display con stile e robustezza.,5468,,,,new,,,,,,,,,,,,,,,,,,APRILIA,Silicone Liquido,,,,,,1,,,,,,,,,,,,,,,,black,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,staffa-per-barra-aio-5-lite; controller-wireless-display-chigee-2-4-ghz-per-serie-aio-5-1; cappucci-valvole-con-sensori-di-pressione-chigee,,,"cover display AIO Chigee
+custodia display AIO Chigee
+cover protettiva AIO Chigee
+cover touchscreen Chigee AIO
+case display AIO Chigee
+cover antiurto AIO Chigee
+cover in silicone AIO Chigee
+cover rigida AIO Chigee
+cover impermeabile AIO Chigee
+cover trasparente AIO Chigee",,,kg,,8.24,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,true,,,active
+cover-display-aio-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cover-display-aio-chigee-9653136.png?v=1754634931,2,Cover Display AIO Chigee - Endurrad - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+cover-display-aio-chigee,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.shopify.com/s/files/1/0604/6561/0991/files/cover-display-aio-chigee-3641190.jpg?v=1754634932,3,Cover Display AIO Chigee - Endurrad - ENDURRAD,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
