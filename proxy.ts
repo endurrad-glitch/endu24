@@ -1,72 +1,43 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
+import { createServerClient } from '@supabase/ssr'
+import type { Database } from '@/types/database'
 
-const PUBLIC_FILE = /\.(.*)$/
-const MAINTENANCE_QUERY_KEY = 'maintenance'
-const MAINTENANCE_BYPASS_COOKIE = 'endu24_maintenance_bypass'
+export async function proxy(request: NextRequest) {
+  const response = NextResponse.next({ request })
 
-const isMaintenanceModeEnabled = () => process.env.MAINTENANCE_MODE === 'true'
-const getAdminToken = () => process.env.MAINTENANCE_ADMIN_TOKEN
+  const supabase = createServerClient<Database>(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll()
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) => response.cookies.set(name, value, options))
+        }
+      }
+    }
+  )
 
-const isPublicPath = (pathname: string) =>
-  pathname === '/maintenance' ||
-  pathname.startsWith('/api') ||
-  pathname.startsWith('/_next') ||
-  pathname === '/favicon.ico' ||
-  pathname === '/robots.txt' ||
-  pathname === '/sitemap.xml' ||
-  PUBLIC_FILE.test(pathname)
+  const {
+    data: { user }
+  } = await supabase.auth.getUser()
 
-const withBypassCookie = (response: NextResponse, token: string) => {
-  response.cookies.set(MAINTENANCE_BYPASS_COOKIE, token, {
-    httpOnly: true,
-    sameSite: 'lax',
-    secure: process.env.NODE_ENV === 'production',
-    path: '/',
-    maxAge: 60 * 60 * 12,
-  })
+  if (!user && request.nextUrl.pathname.startsWith('/admin')) {
+    const loginUrl = request.nextUrl.clone()
+    loginUrl.pathname = '/login'
+    loginUrl.searchParams.set('next', request.nextUrl.pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  if (user && request.nextUrl.pathname === '/login') {
+    return NextResponse.redirect(new URL('/admin', request.url))
+  }
 
   return response
 }
 
-export function proxy(request: NextRequest) {
-  if (!isMaintenanceModeEnabled()) {
-    return NextResponse.next()
-  }
-
-  const adminToken = getAdminToken()
-  const currentBypassCookie = request.cookies.get(MAINTENANCE_BYPASS_COOKIE)?.value
-  const bypassFromCookie = Boolean(adminToken && currentBypassCookie === adminToken)
-
-  if (bypassFromCookie) {
-    return NextResponse.next()
-  }
-
-  if (adminToken) {
-    const incomingToken = request.nextUrl.searchParams.get(MAINTENANCE_QUERY_KEY)
-
-    if (incomingToken === adminToken) {
-      const cleanUrl = request.nextUrl.clone()
-      cleanUrl.searchParams.delete(MAINTENANCE_QUERY_KEY)
-
-      const redirectResponse = NextResponse.redirect(cleanUrl)
-      return withBypassCookie(redirectResponse, adminToken)
-    }
-  }
-
-  const { pathname } = request.nextUrl
-
-  if (isPublicPath(pathname)) {
-    return NextResponse.next()
-  }
-
-  const maintenanceUrl = request.nextUrl.clone()
-  maintenanceUrl.pathname = '/maintenance'
-  maintenanceUrl.search = ''
-
-  return NextResponse.rewrite(maintenanceUrl)
-}
-
 export const config = {
-  matcher: '/:path*',
+  matcher: ['/admin/:path*', '/login']
 }
