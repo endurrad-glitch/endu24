@@ -9,6 +9,10 @@ type Category = {
 
 async function getCategories(): Promise<Category[]> {
   const supabase = createClient()
+  if (!supabase) {
+    return []
+  }
+
   const { data, error } = await supabase.from('categories').select('name, slug').eq('active', true)
 
   if (error) {
