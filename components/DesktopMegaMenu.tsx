@@ -124,12 +124,20 @@ export const desktopMegaMenuCategories: MegaMenuCategory[] = [
 
 export function DesktopMegaMenu() {
   const [openCategory, setOpenCategory] = useState<string | null>(null)
+  const openTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const activeCategory = useMemo(
     () => desktopMegaMenuCategories.find((category) => category.slug === openCategory) ?? null,
     [openCategory],
   )
+
+  const clearOpenTimer = () => {
+    if (openTimeoutRef.current) {
+      clearTimeout(openTimeoutRef.current)
+      openTimeoutRef.current = null
+    }
+  }
 
   const clearCloseTimer = () => {
     if (closeTimeoutRef.current) {
@@ -138,24 +146,36 @@ export function DesktopMegaMenu() {
     }
   }
 
-  const handleOpen = (slug: string) => {
+  const handleEnter = (slug: string) => {
     clearCloseTimer()
-    setOpenCategory(slug)
+    if (openCategory === slug) return
+    clearOpenTimer()
+    openTimeoutRef.current = setTimeout(() => {
+      setOpenCategory(slug)
+    }, 150)
   }
 
-  const scheduleClose = () => {
+  const handleLeave = () => {
+    clearOpenTimer()
     clearCloseTimer()
     closeTimeoutRef.current = setTimeout(() => {
       setOpenCategory(null)
-    }, 180)
+    }, 150)
   }
 
   useEffect(() => {
-    return () => clearCloseTimer()
+    return () => {
+      clearOpenTimer()
+      clearCloseTimer()
+    }
   }, [])
 
   return (
-    <nav className="relative hidden border-t border-slate-200 bg-white lg:block" aria-label="Categorie principali">
+    <nav
+      className="relative hidden border-t border-slate-200 bg-white lg:block"
+      aria-label="Categorie principali"
+      onMouseLeave={handleLeave}
+    >
       <div className="mx-auto w-full max-w-6xl px-4">
         <ul className="flex items-center gap-1 py-1">
           {desktopMegaMenuCategories.map((category) => (
@@ -163,8 +183,7 @@ export function DesktopMegaMenu() {
               <button
                 type="button"
                 className="rounded-lg px-3 py-3 text-sm font-semibold text-slate-800 outline-none transition-colors hover:text-[#ff6a00] focus-visible:text-[#ff6a00] focus-visible:ring-2 focus-visible:ring-[#ff6a00]/30"
-                onMouseEnter={() => handleOpen(category.slug)}
-                onFocus={() => handleOpen(category.slug)}
+                onMouseEnter={() => handleEnter(category.slug)}
                 onClick={() => setOpenCategory((current) => (current === category.slug ? null : category.slug))}
                 aria-expanded={activeCategory?.slug === category.slug}
                 aria-controls={`mega-panel-${category.slug}`}
@@ -176,49 +195,43 @@ export function DesktopMegaMenu() {
         </ul>
       </div>
 
-      <div className="absolute inset-x-0 top-full z-50" onMouseEnter={clearCloseTimer} onMouseLeave={scheduleClose}>
+      <div className="absolute inset-x-0 top-full z-50" onMouseEnter={clearCloseTimer}>
         <div
           className={`mx-auto w-full max-w-7xl px-4 transition-all duration-200 ${
             activeCategory ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-2 opacity-0'
           }`}
         >
-          {activeCategory && (
-            <section
-              id={`mega-panel-${activeCategory.slug}`}
-              className="rounded-b-2xl border border-slate-200 bg-white p-8 shadow-[0_18px_48px_rgba(15,23,42,0.16)]"
-              onMouseLeave={scheduleClose}
-            >
-              <header className="mb-5 border-b border-slate-100 pb-4">
-                <Link
-                  href={`/categoria/${activeCategory.slug}`}
-                  className="text-lg font-bold text-slate-900 transition-colors hover:text-[#ff6a00] focus-visible:text-[#ff6a00] focus-visible:outline-none"
-                >
-                  {activeCategory.label}
-                </Link>
-              </header>
-
-              <div className="grid grid-cols-3 gap-x-10 gap-y-3 xl:grid-cols-4">
-                {activeCategory.items.map((item) => (
+          <section
+            id={activeCategory ? `mega-panel-${activeCategory.slug}` : undefined}
+            className="rounded-b-2xl border border-slate-200 bg-white p-8 shadow-[0_18px_48px_rgba(15,23,42,0.16)]"
+          >
+            {activeCategory && (
+              <>
+                <header className="mb-5 border-b border-slate-100 pb-4">
                   <Link
-                    key={item.slug}
-                    href={`/categoria/${item.slug}`}
-                    className="rounded-md py-1 text-sm leading-6 text-slate-700 transition-colors hover:text-[#ff6a00] focus-visible:text-[#ff6a00] focus-visible:outline-none"
+                    href={`/categoria/${activeCategory.slug}`}
+                    className="text-lg font-bold text-slate-900 transition-colors hover:text-[#ff6a00] focus-visible:text-[#ff6a00] focus-visible:outline-none"
                   >
-                    {item.label}
+                    {activeCategory.label}
                   </Link>
-                ))}
-              </div>
-            </section>
-          )}
+                </header>
+
+                <div className="grid grid-cols-3 gap-x-10 gap-y-3 xl:grid-cols-4">
+                  {activeCategory.items.map((item) => (
+                    <Link
+                      key={item.slug}
+                      href={`/categoria/${item.slug}`}
+                      className="rounded-md py-1 text-sm leading-6 text-slate-700 transition-colors hover:text-[#ff6a00] focus-visible:text-[#ff6a00] focus-visible:outline-none"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </>
+            )}
+          </section>
         </div>
       </div>
-
-      <div
-        className="fixed inset-0 z-40 hidden bg-slate-900/10 lg:block"
-        aria-hidden
-        style={{ display: activeCategory ? 'block' : 'none' }}
-        onMouseEnter={scheduleClose}
-      />
     </nav>
   )
 }
