@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button'
 const links = [
   { href: '/admin', label: 'Dashboard' },
   { href: '/admin/logo', label: 'Branding' },
-  { href: '/admin/menu', label: 'Menu' }
+  { href: '/admin/menu', label: 'Menu' },
+  { href: '/admin/import', label: 'Import' }
 ]
 
 export function AdminShell({ children }: { children: React.ReactNode }) {
